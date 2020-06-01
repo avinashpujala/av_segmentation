@@ -17,7 +17,7 @@ Assumptions/Limitations:
   
 Usage:
   ```
-  inOut.avspeech_download.py train
+  inOut.download_av_speech.py train
   ```
 Replace train with test if you want to download the test set.
 
