@@ -5,6 +5,7 @@ It downloads only the relevant part of the video and saves it in a mp4 container
 
 Contains scripts for downloading AVSpeech dataset, 720p/360p videos with 25fps and audio at 44.1kHz. 
 This part of the code has been adapted from Nabarun Goswami's code at
+
 https://github.com/naba89/AVSpeechDownloader
 
 Files names are <yt_id>\_<start_time>\_<end_time>.mp4
@@ -16,7 +17,7 @@ Assumptions/Limitations:
   
 Usage:
   ```
-  inOut/download_data.py train
+  inOut.avspeech_download.py train
   ```
 Replace train with test if you want to download the test set.
 
@@ -26,8 +27,3 @@ Dependencies:
   conda install -c conda-forge youtube-dl
   pip install ffmpeg-python
 ```
-NOTE:
-
-  This is a very simple script. I haven't take too much care, just wrote it quickly to download the dataset. Let me know if you have any problems using it, will try to fix it. Feel free to send in pull requests if you would like to improve it.
-  
-  Cheers!
