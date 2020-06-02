@@ -7,6 +7,15 @@ import numpy as np
 from util.fileTools import get_files
 
 
+# class VidInfo:
+#     def __init__(self, yt_id, start_time, end_time, outDir):
+#         self.yt_id = yt_id
+#         self.start_time = float(start_time)
+#         self.end_time = float(end_time)
+#         self.out_filename = os.path.join(outDir,
+#                                          yt_id + '_' + start_time +
+#                                          '_' + end_time + '.mp4')
+
 def download_av_speech(path_to_csv, out_dir='train', n_files=270000):
     """
     Downloads AVSpeech Dataset
@@ -50,6 +59,7 @@ def download_av_speech(path_to_csv, out_dir='train', n_files=270000):
         inds = np.nonzero(~np.isin(fNames, fNames_pre))[0]
         lines = [lines[ind] for ind in inds]
         vidinfos = [VidInfo(x[0], x[1], x[2], out_dir) for x in lines]
+
     bad_files = open(os.path.join(out_dir, 'bad_files.txt'), 'w')
     results = ThreadPool(5).imap_unordered(__download, vidinfos)
     cnt = 0
@@ -72,7 +82,7 @@ def __download(vidinfo):
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             download_url = ydl.extract_info(url=yt_url, download=False)['url']
-    except:
+    except Exception:
         return_msg = '{}, ERROR (youtube)!'.format(vidinfo.yt_id)
         return return_msg
     try:
