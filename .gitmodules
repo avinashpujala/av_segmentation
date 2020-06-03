@@ -1,0 +1,3 @@
+[submodule "nussl"]
+	path = nussl
+	url = https://github.com/nussl/nussl.git
