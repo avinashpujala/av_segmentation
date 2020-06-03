@@ -1,3 +1,7 @@
 [submodule "nussl"]
 	path = nussl
 	url = https://github.com/nussl/nussl.git
+[submodule "multisensnory"]
+	path = multisensory
+	url = https://github.com/andrewowens/multisensory.git
+
