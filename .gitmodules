@@ -1,0 +1,3 @@
+[submodule "multisensory"]
+	path = multisensory
+	url = https://github.com/andrewowens/multisensory.git
