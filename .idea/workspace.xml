@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9031a1c3-c104-4146-bb12-858f3fd2c0e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/pujalaa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Looking to Listen - Noisy cafeteria-uKwUL7vt03M.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/avsep/audio_from_movie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/avsep/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/avsep/test_video_writeTEMP_MPY_wvf_snd.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.idea/python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoAudioMosaicingContinuityNMF-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoAudioMosaicingContinuityNMF_web-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoDrumExtractionKAM_NMF_percThreshold-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoDrumExtractionKAM_NMF_scoreInformed-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoDrumSoundSeparationNMF-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoDrumSoundSeparationNMF_minimal-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoDrumSoundSeparationNMF_web-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoEDMDecomposition-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoEDMDecompositionFourComp#-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoEDMDecompositionFourComp-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoEDMDecompositionFourComp_animate-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoEDMLearnWandH_minimal-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/.ipynb_checkpoints/demoEDM_NMFdiag_minimal-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/.idea/python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/HPSS_KAM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/LSEE_MSTFTM_GriffinLim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/NEMA.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/NMF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/NMFD.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/NMFconv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/NMFdiag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/alphaWienerFilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/coloredComponents.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/convModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/demoVoiceSeparation_ap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/diagonalitySoftConstraintsNMF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/drumSpecificSoftConstraintsNMF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/forwardSTFT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/freq2midi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/initActivations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/initTemplates.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/inverseSTFT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/logFreqLogMag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/midi2freq.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/percussivenessEstimation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/semiFixedComponentConstraintsNMF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/shiftOperator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/visualizeComponentsKAM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/visualizeComponentsNMF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/120_jd.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/120_jd_bass_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/120_jd_drums_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/120_jd_melody_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/Beatles_LetItBe.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/Bees_Buzzing.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/LSDDM_EM_Effects.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/LSDDM_EM_bass.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/LSDDM_EM_drums.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/LSDDM_EM_melody.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/LSDDM_EM_track.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/dictW.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_808Drums.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_808Hihat.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_808Kick.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_808Mixture.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_808Snare.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_AmenBreak-old1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_AmenBreak.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_AmenBreakDrums.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_FunkyDrums.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_FunkyHihat.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_FunkyKick.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_FunkyMixture.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_FunkySnare.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_IGotYouBeats.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_IGotYouDrums.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_IGotYouMelody.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/data/runningExample_IGotYouMixture.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/demoAudioMosaicingContinuityNMF.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/demoDrumExtractionKAM_NMF_percThreshold.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/demoDrumExtractionKAM_NMF_scoreInformed.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/demoDrumSoundSeparationNMF.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/demoEDMDecompositionFourComp.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/.idea/unit_tests.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/run_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_HPSS_KAM.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_HPSS_KAM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_LSEE_MSTFTM_GriffinLim.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_LSEE_MSTFTM_GriffinLim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_NMF.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_NMF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_NMFD.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_NMFD.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_NMFconv.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_NMFconv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_NMFdiag.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_NMFdiag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_STFT.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_STFT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_initActivations.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_initActivations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_initTemplates.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_initTemplates.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_logFreqLogMag.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/unit_tests/test_logFreqLogMag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmfTools/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/sep_video_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/insight_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/av_segmentation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inOut.py" beforeDir="false" afterPath="$PROJECT_DIR$/inOut.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cqJ1DuHWWxalAoYIzCQwuiBlpe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="av_segmentation" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="av_segmentation" />
+      </console-settings>
+    </option>
+    <option name="myUseExistingConsole" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Avinash\miscellaneous\project\av_segmentation\tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.inOut">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="audio_from_movie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/avsep" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/avsep/audio_from_movie.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demoVoiceSeparation_ap (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nmfTools/NMFtoolbox" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nmfTools/NMFtoolbox/demoVoiceSeparation_ap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demoVoiceSeparation_ap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nmfTools/NMFtoolbox" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="E:\Avinash\miscellaneous\project\av_segmentation\nmfTools\NMFtoolbox\demoVoiceSeparation_ap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="inOut" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inOut.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="initTemplates" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nmfTools/NMFtoolbox" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nmfTools/NMFtoolbox/initTemplates.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.audio_from_movie" />
+      <item itemvalue="Python.demoVoiceSeparation_ap" />
+      <item itemvalue="Python.demoVoiceSeparation_ap (1)" />
+      <item itemvalue="Python.initTemplates" />
+      <item itemvalue="Python.inOut" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.inOut" />
+        <item itemvalue="Python.demoVoiceSeparation_ap (1)" />
+        <item itemvalue="Python.audio_from_movie" />
+        <item itemvalue="Python.initTemplates" />
+        <item itemvalue="Python.demoVoiceSeparation_ap" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9031a1c3-c104-4146-bb12-858f3fd2c0e7" name="Default Changelist" comment="" />
+      <created>1591249972865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591249972865</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="188" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591272869429">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state x="188" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.693@0.0.1280.693" timestamp="1591272869429" />
+    <state x="375" y="147" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591321456132">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state x="375" y="147" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.693@0.0.1280.693" timestamp="1591321456132" />
+    <state x="455" y="91" key="FileChooserDialogImpl" timestamp="1591272169449">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state x="455" y="91" key="FileChooserDialogImpl/0.0.1280.693@0.0.1280.693" timestamp="1591272169449" />
+    <state width="1222" height="378" key="GridCell.Tab.0.bottom" timestamp="1591339616097">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state width="1222" height="378" key="GridCell.Tab.0.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
+    <state width="1222" height="378" key="GridCell.Tab.0.center" timestamp="1591339616097">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state width="1222" height="378" key="GridCell.Tab.0.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
+    <state width="1222" height="378" key="GridCell.Tab.0.left" timestamp="1591339616097">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state width="1222" height="378" key="GridCell.Tab.0.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
+    <state width="1222" height="378" key="GridCell.Tab.0.right" timestamp="1591339616097">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state width="1222" height="378" key="GridCell.Tab.0.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
+    <state width="1222" height="378" key="GridCell.Tab.1.bottom" timestamp="1591339616097">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state width="1222" height="378" key="GridCell.Tab.1.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
+    <state width="1222" height="378" key="GridCell.Tab.1.center" timestamp="1591339616097">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state width="1222" height="378" key="GridCell.Tab.1.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
+    <state width="1222" height="378" key="GridCell.Tab.1.left" timestamp="1591339616097">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state width="1222" height="378" key="GridCell.Tab.1.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
+    <state width="1222" height="378" key="GridCell.Tab.1.right" timestamp="1591339616097">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state width="1222" height="378" key="GridCell.Tab.1.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
+    <state x="141" y="0" key="SettingsEditor" timestamp="1591268277917">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.693@0.0.1280.693" timestamp="1591268277917" />
+    <state x="204" y="74" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1591318439655">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state x="204" y="74" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.693@0.0.1280.693" timestamp="1591318439655" />
+    <state x="432" y="204" key="scopes" timestamp="1591272645804">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state x="432" y="204" key="scopes/0.0.1280.693@0.0.1280.693" timestamp="1591272645804" />
+    <state x="303" y="14" width="672" height="678" key="search.everywhere.popup" timestamp="1591331450855">
+      <screen x="0" y="0" width="1280" height="693" />
+    </state>
+    <state x="303" y="14" width="672" height="678" key="search.everywhere.popup/0.0.1280.693@0.0.1280.693" timestamp="1591331450855" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/sep_video_script.py</url>
+          <line>310</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/multisensory/src/sourcesep.py</url>
+          <line>827</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/multisensory/src/shift_net.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

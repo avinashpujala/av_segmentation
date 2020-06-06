@@ -1,3 +1,6 @@
 /multisensory/results/*
 /multisensory/data/*
 *.pyc
+.nmfTools/data/*
+*.wav
+*.mp4
