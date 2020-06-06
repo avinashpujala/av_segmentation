@@ -4,3 +4,4 @@
 .nmfTools/data/*
 *.wav
 *.mp4
+*.ipynb
