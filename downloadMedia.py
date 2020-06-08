@@ -1,11 +1,5 @@
-import sys
 import os
 from multiprocessing.pool import ThreadPool
-# dir_lib = r'e:/avinash/downloads/Anaconda3/avsource/lib/site-packages/ffmpeg.py'
-# import importlib.util as iutil
-# spec = iutil.spec_from_file_location('ffmpeg', dir_lib)
-# ffmpeg = iutil.module_from_spec(spec)
-# spec.loader.exec_module(ffmpeg)
 import youtube_dl
 import ffmpeg
 import numpy as np
@@ -97,6 +91,7 @@ def __download(vidinfo):
         return return_msg
     return '{}, DONE!'.format(vidinfo.yt_id)
 
+
 def yt_vid_to_mp4(yt_url, out_file, start_time=None, stop_time=None, ydl_opts=None):
     if ydl_opts is None:
         ydl_opts = {'format': '22/18', 'quiet': True,
@@ -123,12 +118,4 @@ def yt_vid_to_mp4(yt_url, out_file, start_time=None, stop_time=None, ydl_opts=No
         return_msg = '{}, ERROR (ffmpeg)!'.format(yt_url)
         return return_msg
     return '{}, DONE!'.format(yt_url)
-
-yt_url =r'https://www.youtube.com/watch?v=rVQVAPiJWKU'
-out_file = r'E:\Avinash\miscellaneous\project\av_segmentation\multisensory\data\nirvana_short.mp4'
-foo = yt_vid_to_mp4(yt_url, out_file, start_time=220, stop_time=230)
-print(foo)
-
-
-
 

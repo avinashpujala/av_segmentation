@@ -13,13 +13,14 @@ Usage:
   ```
   inOut.download_av_speech.py train
   ```
-Dependencies:
+Cloning, creating virtual environment, installing dependencies:
 ```
-  conda install -c conda-forge ffmpeg
-  conda install -c conda-forge youtube-dl
-  pip install ffmpeg-python
+git clone --single-branch -branch minimal_win --depth 1 https://github.com/avinashpujala/av_segmentation.git
+cd av_segmentation
+conda env create -f environment/av_segmentaton.yml
+conda activate av_segmentation
 ```
-In addition requires ```mediaio``` from https://github.com/avivga/mediaio.git
+In addition, requires ```mediaio``` from https://github.com/avivga/mediaio.git
 ```
 git clone --single-branch -branch --depth 1  https://github.com/avivga/mediaio.git
 cd mediaio

@@ -83,7 +83,7 @@
       <recent name="E:\Avinash\miscellaneous\project\av_segmentation\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test2">
+  <component name="RunManager" selected="Python.test (1)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,40 +105,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demoVoiceSeparation_ap (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="downloadMedia (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nmfTools/NMFtoolbox" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nmfTools/NMFtoolbox/demoVoiceSeparation_ap.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="inOut" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="av_segmentation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inOut.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/downloadMedia.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,58 +123,70 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="initTemplates" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="downloadMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nmfTools/NMFtoolbox" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nmfTools/NMFtoolbox/initTemplates.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pydevconsole" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="av_segmentation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/pydevconsole.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="av_segmentation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/avsep/test2.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Avi\Google Drive\Code\projects\av_segmentation\downloadMedia.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="processMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/processMedia.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/avsep" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/avsep/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -208,19 +196,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.demoVoiceSeparation_ap (1)" />
-      <item itemvalue="Python.inOut" />
-      <item itemvalue="Python.initTemplates" />
-      <item itemvalue="Python.pydevconsole" />
-      <item itemvalue="Python.test2" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.downloadMedia" />
+      <item itemvalue="Python.downloadMedia (1)" />
+      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.processMedia" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test2" />
-        <item itemvalue="Python.pydevconsole" />
-        <item itemvalue="Python.inOut" />
-        <item itemvalue="Python.demoVoiceSeparation_ap (1)" />
-        <item itemvalue="Python.initTemplates" />
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.processMedia" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.downloadMedia" />
+        <item itemvalue="Python.downloadMedia (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -257,10 +245,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="134" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591586328193">
+    <state x="134" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591592806202">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="134" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1591586328193" />
+    <state x="134" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1591592806202" />
     <state x="188" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.693@0.0.1280.693" timestamp="1591272869429" />
     <state x="375" y="147" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591321456132">
       <screen x="0" y="0" width="1280" height="693" />
@@ -275,37 +263,45 @@
     </state>
     <state x="90" y="76" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591587268696" />
     <state x="455" y="91" key="FileChooserDialogImpl/0.0.1280.693@0.0.1280.693" timestamp="1591272169449" />
-    <state width="1222" height="378" key="GridCell.Tab.0.bottom" timestamp="1591339616097">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state width="1224" height="185" key="GridCell.Tab.0.bottom" timestamp="1591604619045">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1224" height="185" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591604619045" />
     <state width="1222" height="378" key="GridCell.Tab.0.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1222" height="378" key="GridCell.Tab.0.center" timestamp="1591339616097">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state width="1224" height="185" key="GridCell.Tab.0.center" timestamp="1591604619044">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1224" height="185" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591604619044" />
     <state width="1222" height="378" key="GridCell.Tab.0.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1222" height="378" key="GridCell.Tab.0.left" timestamp="1591339616097">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state width="1224" height="185" key="GridCell.Tab.0.left" timestamp="1591604619044">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1224" height="185" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591604619044" />
     <state width="1222" height="378" key="GridCell.Tab.0.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1222" height="378" key="GridCell.Tab.0.right" timestamp="1591339616097">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state width="1224" height="185" key="GridCell.Tab.0.right" timestamp="1591604619045">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1224" height="185" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591604619045" />
     <state width="1222" height="378" key="GridCell.Tab.0.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1222" height="378" key="GridCell.Tab.1.bottom" timestamp="1591339616097">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state width="1224" height="185" key="GridCell.Tab.1.bottom" timestamp="1591604619046">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1224" height="185" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591604619046" />
     <state width="1222" height="378" key="GridCell.Tab.1.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1222" height="378" key="GridCell.Tab.1.center" timestamp="1591339616097">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state width="1224" height="185" key="GridCell.Tab.1.center" timestamp="1591604619045">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1224" height="185" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1591604619045" />
     <state width="1222" height="378" key="GridCell.Tab.1.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1222" height="378" key="GridCell.Tab.1.left" timestamp="1591339616097">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state width="1224" height="185" key="GridCell.Tab.1.left" timestamp="1591604619045">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1224" height="185" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1591604619045" />
     <state width="1222" height="378" key="GridCell.Tab.1.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1222" height="378" key="GridCell.Tab.1.right" timestamp="1591339616097">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state width="1224" height="185" key="GridCell.Tab.1.right" timestamp="1591604619045">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1224" height="185" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1591604619045" />
     <state width="1222" height="378" key="GridCell.Tab.1.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
     <state x="141" y="0" key="SettingsEditor" timestamp="1591587490936">
       <screen x="0" y="0" width="1280" height="680" />
