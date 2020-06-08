@@ -1,7 +1,17 @@
+
+#Large datasets
 /multisensory/results/*
 /multisensory/data/*
+
+#python
 *.pyc
+*.ipynb
 .nmfTools/data/*
+
+#media files
 *.wav
 *.mp4
-*.ipynb
+
+
+#pyCharm
+*.idea

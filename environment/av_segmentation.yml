@@ -1,4 +1,4 @@
-name: avsource
+name: av_segmentation
 channels:
   - conda-forge
   - defaults

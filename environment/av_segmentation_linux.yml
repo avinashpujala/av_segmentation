@@ -1,4 +1,4 @@
-name: av_source
+name: av_segmentation_linux
 channels:
   - conda-forge
   - anaconda
