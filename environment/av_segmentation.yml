@@ -1,5 +1,6 @@
 name: av_segmentation
 channels:
+  - anaconda
   - conda-forge
   - defaults
 dependencies:
@@ -61,6 +62,7 @@ dependencies:
   - fsspec=0.7.2=py_0
   - future=0.18.2=py37hc8dfbb8_1
   - gast=0.3.3=py_0
+  - git=2.23.0=h6bb4b03_0
   - glob2=0.7=py_0
   - graphviz=2.38.0=h6538335_1011
   - grpcio=1.23.0=py37h3f65fb1_1
