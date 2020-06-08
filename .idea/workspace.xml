@@ -56,13 +56,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/avsep/test2.py" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings module-name="av_segmentation" is-module-sdk="true" working-directory="$PROJECT_DIR$">
-        <option name="myUseModuleSdk" value="true" />
+      <console-settings module-name="av_segmentation" sdk-home="C:\Users\Avi\anaconda3\envs\av_segmentation\python.exe" working-directory="$PROJECT_DIR$">
+        <option name="mySdkHome" value="C:\Users\Avi\anaconda3\envs\av_segmentation\python.exe" />
         <option name="myModuleName" value="av_segmentation" />
         <option name="myWorkingDirectory" value="$PROJECT_DIR$" />
       </console-settings>
@@ -117,31 +117,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demoVoiceSeparation_ap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="inOut" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nmfTools/NMFtoolbox" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="E:\Avinash\miscellaneous\project\av_segmentation\nmfTools\NMFtoolbox\demoVoiceSeparation_ap.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="inOut" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="av_segmentation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -177,10 +159,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pydevconsole" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/pydev/pydevconsole.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/avsep" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -196,19 +202,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test2" />
-      <item itemvalue="Python.demoVoiceSeparation_ap" />
       <item itemvalue="Python.demoVoiceSeparation_ap (1)" />
-      <item itemvalue="Python.initTemplates" />
       <item itemvalue="Python.inOut" />
+      <item itemvalue="Python.initTemplates" />
+      <item itemvalue="Python.pydevconsole" />
+      <item itemvalue="Python.test2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pydevconsole" />
         <item itemvalue="Python.test2" />
         <item itemvalue="Python.inOut" />
         <item itemvalue="Python.demoVoiceSeparation_ap (1)" />
         <item itemvalue="Python.initTemplates" />
-        <item itemvalue="Python.demoVoiceSeparation_ap" />
       </list>
     </recent_temporary>
   </component>
@@ -254,10 +260,10 @@
       <screen x="0" y="0" width="1280" height="693" />
     </state>
     <state x="375" y="147" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.693@0.0.1280.693" timestamp="1591321456132" />
-    <state x="90" y="76" key="FileChooserDialogImpl" timestamp="1591579254275">
+    <state x="90" y="76" key="FileChooserDialogImpl" timestamp="1591584833926">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="90" y="76" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591579254275" />
+    <state x="90" y="76" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591584833926" />
     <state x="455" y="91" key="FileChooserDialogImpl/0.0.1280.693@0.0.1280.693" timestamp="1591272169449" />
     <state width="1222" height="378" key="GridCell.Tab.0.bottom" timestamp="1591339616097">
       <screen x="0" y="0" width="1280" height="693" />
@@ -291,10 +297,10 @@
       <screen x="0" y="0" width="1280" height="693" />
     </state>
     <state width="1222" height="378" key="GridCell.Tab.1.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state x="141" y="0" key="SettingsEditor" timestamp="1591579220270">
+    <state x="141" y="0" key="SettingsEditor" timestamp="1591585043555">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1591579220270" />
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1591585043555" />
     <state x="141" y="0" key="SettingsEditor/0.0.1280.693@0.0.1280.693" timestamp="1591268277917" />
     <state x="204" y="74" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1591318439655">
       <screen x="0" y="0" width="1280" height="693" />
