@@ -20,7 +20,6 @@ Dependencies:
   pip install ffmpeg-python
 ```
 In addition requires ```mediaio``` from https://github.com/avivga/mediaio.git
-Get this as follows:
 ```
 git clone --single-branch -branch --depth 1  https://github.com/avivga/mediaio.git
 cd mediaio
