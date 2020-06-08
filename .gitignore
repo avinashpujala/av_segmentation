@@ -2,11 +2,13 @@
 #Large datasets
 /multisensory/results/*
 /multisensory/data/*
+/data/*
 
 #python
 *.pyc
 *.ipynb
-.nmfTools/data/*
+/nmfTools/data/*
+/nmfTools/.idea/*
 
 #media files
 *.wav
@@ -14,4 +16,4 @@
 
 
 #pyCharm
-*.idea
+*.idea/*
