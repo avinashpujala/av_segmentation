@@ -59,9 +59,14 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../python/my-code/apCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+>>>>>>> Installed pygame
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -274,8 +279,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="508" y="91" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1591587022243" />
+<<<<<<< HEAD
     <state x="175" y="116" width="424" height="525" key="FileChooserDialogImpl" timestamp="1592032402037">
       <screen x="72" y="27" width="1464" height="837" />
+=======
+    <state x="90" y="76" key="FileChooserDialogImpl" timestamp="1591669206420">
+      <screen x="0" y="0" width="1280" height="680" />
+>>>>>>> Installed pygame
     </state>
     <state x="90" y="76" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591669206420" />
     <state x="455" y="91" key="FileChooserDialogImpl/0.0.1280.693@0.0.1280.693" timestamp="1591272169449" />

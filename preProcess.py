@@ -1,4 +1,3 @@
-# from collections import namedtuple
 import numpy as np
 import librosa
 from cv2 import resize
