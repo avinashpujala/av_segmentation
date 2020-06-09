@@ -17,6 +17,11 @@ class __get_vid:
         self.fps = vid.fps
         self.dur = vid.duration
 
+    def to_videoClip(self):
+        clips = [med.ImageClip(img).set_duration(1/self.fps) for img in self.imgs]
+        mov = med.concatenate_videoclips(clips, method='compose')
+        return mov
+
 
 def separate_streams(path_to_mov):
     """

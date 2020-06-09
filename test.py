@@ -20,7 +20,8 @@ t_vid = np.linspace(0, vid.dur, vid.imgs.shape[0])
 plt.plot(t_aud, aud.ts/aud.ts.max())
 plt.plot(t_vid, foo/foo.max())
 
-
+"""
 # yt_url = r'https://www.youtube.com/watch?v=gMz4r5RLvKs'
 # yt_url = r'https://www.youtube.com/watch?v=fregObNcHC8'
 # yt_url = yt_url.split('?v=')[-1]
+"""
