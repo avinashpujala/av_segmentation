@@ -12,13 +12,24 @@ filePaths = glob.glob(join(dir_vids, '*.mp4'))
 fp = filePaths[idx]
 # fp = join(dir_vids, '_-_1K9uCid4_270.067000_275.767000.mp4')
 aud, vid = processMedia.separate_streams(fp)
-foo = np.gradient(vid.imgs[:, ::2, ::2], axis=0).sum(axis=-1).sum(axis=-1)
+imgs_sub = vid.imgs[:, ::2, ::2]
+dImgs = np.gradient(imgs_sub, axis=0).astype(imgs_sub.dtype)
+# dImgs2 = np.gradient(imgs_sub-imgs_sub.mean(), axis=0).astype(imgs_sub.dtype)
+foo = dImgs.mean(axis=-1).mean(axis=-1)
+# foo2 = dImgs2.mean(axis=-1).mean(axis=-1)
 
 #%%
 t_aud = np.linspace(0, aud.dur, len(aud.ts))
 t_vid = np.linspace(0, vid.dur, vid.imgs.shape[0])
-plt.plot(t_aud, aud.ts/aud.ts.max())
-plt.plot(t_vid, foo/foo.max())
+plt.plot(t_aud, aud.ts/aud.ts.max(), label='audio')
+plt.plot(t_vid, foo/foo.max(), label='vid motion')
+# plt.plot(t_vid, foo2/foo2.max(), ls ='--', label='Mean sub + diff')
+plt.legend()
+
+#%%
+# processMedia.to_videoClip(dImgs, vid.fps).write_videofile('dMovie.mp4')
+# processMedia.to_videoClip(dImgs2, vid.fps).write_videofile('dMovie2.mp4')
+
 
 """
 # yt_url = r'https://www.youtube.com/watch?v=gMz4r5RLvKs'

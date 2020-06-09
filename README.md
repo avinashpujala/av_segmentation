@@ -27,3 +27,10 @@ cd mediaio
 python setup.py --user
 ```
 
+Optionally, for training the model specifically on human speech, which involves face detection in the pipeline, install CMake and follow that with
+```
+git clone --depth 1 https://github.com/avivga/face-detection.git
+cd face-detection 
+python setup.py install --user
+```
+
