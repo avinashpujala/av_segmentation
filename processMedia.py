@@ -3,6 +3,7 @@ from moviepy import editor as med
 import numpy as np
 import cv2
 
+
 class __get_aud(object):
     def __init__(self, aud):
         self.ts = aud.to_soundarray().mean(axis=1)
@@ -18,9 +19,14 @@ class __get_vid:
         self.dur = vid.duration
 
     def to_videoClip(self):
-        clips = [med.ImageClip(img).set_duration(1/self.fps) for img in self.imgs]
+        # imgs = [cv2.cvtColor(img, cv2.COLOR_GRAY2RGB) for img in self.imgs]
+        imgs = gray2rgb(self.imgs)
+        clips = [med.ImageClip(img).set_duration(1 / self.fps) for img in imgs]
         mov = med.concatenate_videoclips(clips, method='compose')
         return mov
+
+    def write_videofile(self, fname='movie.mp4', *args, **kwargs):
+        self.to_videoClip().write_videofile(fname, self.fps, *args, **kwargs)
 
 
 def separate_streams(path_to_mov):
@@ -40,3 +46,21 @@ def separate_streams(path_to_mov):
         a = __get_aud(aud)
         v = __get_vid(vid)
     return a, v
+
+
+def to_videoClip(imgs, fps):
+    imgs = gray2rgb(imgs)
+    clips = [med.ImageClip(img).set_duration(1 / fps) for img in imgs]
+    mov = med.concatenate_videoclips(clips, method='compose')
+    mov = mov.set_fps(fps)
+    return mov
+
+
+def gray2rgb(imgs):
+    imgs = [cv2.cvtColor(img, cv2.COLOR_GRAY2RGB) for img in imgs]
+    return np.array(imgs)
+
+
+def rgb2gray(imgs):
+    imgs = [cv2.cvtColor(img, cv2.COLOR_RGB2GRAY) for img in imgs]
+    return np.array(imgs)
