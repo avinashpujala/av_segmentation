@@ -1,7 +1,7 @@
 name: av_segmentation
 channels:
-  - anaconda
   - conda-forge
+  - anaconda
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -192,6 +192,7 @@ dependencies:
   - xorg-xextproto=7.3.0=h14c3975_1002
   - xorg-xproto=7.0.31=h14c3975_1007
   - xz=5.2.5=h7b6447c_0
+  - youtube-dl=2020.6.6=py38h32f6830_0
   - zeromq=4.3.1=he6710b0_3
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h7b6447c_3
@@ -200,5 +201,5 @@ dependencies:
     - keras==2.3.1
     - keras-applications==1.0.8
     - pyyaml==5.3.1
-prefix: /home/ubuntu/anaconda3/envs/av_segmentation
+prefix: /home/avinash/anaconda3/envs/av_segmentation
 

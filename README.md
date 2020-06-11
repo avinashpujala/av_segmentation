@@ -15,7 +15,7 @@ Usage:
   ```
 Cloning, creating virtual environment, installing dependencies:
 ```
-git clone --single-branch -branch minimal_win --depth 1 https://github.com/avinashpujala/av_segmentation.git
+git clone --single-branch -b minimal_win --depth 1 https://github.com/avinashpujala/av_segmentation.git
 cd av_segmentation
 conda env create -f environment/av_segmentaton.yml
 conda activate av_segmentation
