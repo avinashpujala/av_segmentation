@@ -23,6 +23,7 @@ class __get_vid:
         imgs = gray2rgb(self.imgs)
         clips = [med.ImageClip(img).set_duration(1 / self.fps) for img in imgs]
         mov = med.concatenate_videoclips(clips, method='compose')
+        mov = mov.set_fps(self.fps)
         return mov
 
     def write_videofile(self, fname='movie.mp4', *args, **kwargs):
@@ -64,3 +65,4 @@ def gray2rgb(imgs):
 def rgb2gray(imgs):
     imgs = [cv2.cvtColor(img, cv2.COLOR_RGB2GRAY) for img in imgs]
     return np.array(imgs)
+
