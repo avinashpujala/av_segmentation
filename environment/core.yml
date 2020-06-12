@@ -1,7 +1,7 @@
 name: av_segmentation
 channels:
-  - conda-forge
   - anaconda
+  - conda-forge
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -198,8 +198,19 @@ dependencies:
   - zlib=1.2.11=h7b6447c_3
   - zstd=1.4.4=h0b5b093_3
   - pip:
+    - audioread==2.1.8
+    - ffmpeg-python==0.2.0
+    - future==0.18.2
+    - joblib==0.15.1
     - keras==2.3.1
     - keras-applications==1.0.8
+    - librosa==0.7.2
+    - llvmlite==0.33.0
+    - numba==0.50.0
     - pyyaml==5.3.1
-prefix: /home/avinash/anaconda3/envs/av_segmentation
+    - resampy==0.2.2
+    - scikit-learn==0.23.1
+    - soundfile==0.10.3.post1
+    - threadpoolctl==2.1.0
+prefix: /home/avi/anaconda3/envs/av_segmentation
 
