@@ -109,6 +109,9 @@
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -127,6 +130,9 @@
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -145,6 +151,9 @@
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -163,6 +172,9 @@
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -181,6 +193,9 @@
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/avsep" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -196,11 +211,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.downloadMedia" />
       <item itemvalue="Python.downloadMedia (1)" />
-      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.downloadMedia" />
       <item itemvalue="Python.processMedia" />
+      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
