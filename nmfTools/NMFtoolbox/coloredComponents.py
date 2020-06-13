@@ -33,7 +33,7 @@ import numpy as np
 from matplotlib.colors import rgb_to_hsv, hsv_to_rgb, to_rgb
 import matplotlib.cm as cm
 
-from NMFtoolbox.utils import EPS
+from utils import EPS
 
 
 def coloredComponents(compA, colVec=None):

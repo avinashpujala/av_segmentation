@@ -32,8 +32,8 @@
 
 import numpy as np
 
-from NMFtoolbox.midi2freq import midi2freq
-from NMFtoolbox.utils import load_matlab_dict, EPS
+from nmfTools.NMFtoolbox.midi2freq import midi2freq
+from nmfTools.NMFtoolbox.utils import load_matlab_dict, EPS
 
 
 def initTemplates(parameter, strategy='random'):

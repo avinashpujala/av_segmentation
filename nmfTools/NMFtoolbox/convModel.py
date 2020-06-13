@@ -31,8 +31,8 @@
 
 import numpy as np
 
-from NMFtoolbox.shiftOperator import shiftOperator
-from NMFtoolbox.utils import EPS
+from nmfTools.NMFtoolbox.shiftOperator import shiftOperator
+from nmfTools.NMFtoolbox.utils import EPS
 
 
 def convModel(W, H):

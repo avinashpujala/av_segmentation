@@ -34,11 +34,11 @@ import numpy as np
 from copy import deepcopy
 from tqdm import tnrange
 
-from NMFtoolbox.convModel import convModel
-from NMFtoolbox.initTemplates import initTemplates
-from NMFtoolbox.initActivations import initActivations
-from NMFtoolbox.shiftOperator import shiftOperator
-from NMFtoolbox.utils import EPS
+from nmfTools.NMFtoolbox.convModel import convModel
+from nmfTools.NMFtoolbox.initTemplates import initTemplates
+from nmfTools.NMFtoolbox.initActivations import initActivations
+from nmfTools.NMFtoolbox.shiftOperator import shiftOperator
+from nmfTools.NMFtoolbox.utils import EPS
 
 
 def NMFD(V, parameter=None, paramConstr=None):
