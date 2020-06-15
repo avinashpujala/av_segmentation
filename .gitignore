@@ -21,3 +21,8 @@
 # Notebook checkpoints
 .ipynb_checkpoints/*
 
+# CSV files
+*.csv
+/data_csv/*
+data_csv/*
+
