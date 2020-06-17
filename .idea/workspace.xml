@@ -86,7 +86,7 @@
       <recent name="E:\Avinash\miscellaneous\project\av_segmentation\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.preProcess">
+  <component name="RunManager" selected="Python.asfv">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,6 +101,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="asfv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/networks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/networks/asfv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,9 +192,6 @@
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -191,42 +207,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="av_segmentation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/avsep" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/avsep/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.download_vids_from_ytid_in_csv" />
       <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.readWriteMedia" />
       <item itemvalue="Python.preProcess" />
+      <item itemvalue="Python.asfv" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.asfv" />
         <item itemvalue="Python.preProcess" />
-        <item itemvalue="Python.readWriteMedia" />
         <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.readWriteMedia" />
         <item itemvalue="Python.download_vids_from_ytid_in_csv" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -286,54 +280,54 @@
     <state x="90" y="76" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591669206420" />
     <state x="455" y="91" key="FileChooserDialogImpl/0.0.1280.693@0.0.1280.693" timestamp="1591272169449" />
     <state x="175" y="116" width="424" height="525" key="FileChooserDialogImpl/72.27.1464.837@72.27.1464.837" timestamp="1592032402037" />
-    <state width="1441" height="254" key="GridCell.Tab.0.bottom" timestamp="1592368284174">
+    <state width="1441" height="254" key="GridCell.Tab.0.bottom" timestamp="1592377970220">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
     <state width="1222" height="378" key="GridCell.Tab.0.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.0.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592368284174" />
-    <state width="1441" height="254" key="GridCell.Tab.0.center" timestamp="1592368284173">
+    <state width="1441" height="254" key="GridCell.Tab.0.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
+    <state width="1441" height="254" key="GridCell.Tab.0.center" timestamp="1592377970219">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
     <state width="1222" height="378" key="GridCell.Tab.0.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.0.center/72.27.1464.837@72.27.1464.837" timestamp="1592368284173" />
-    <state width="1441" height="254" key="GridCell.Tab.0.left" timestamp="1592368284172">
+    <state width="1441" height="254" key="GridCell.Tab.0.center/72.27.1464.837@72.27.1464.837" timestamp="1592377970219" />
+    <state width="1441" height="254" key="GridCell.Tab.0.left" timestamp="1592377970219">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591679426162" />
     <state width="1222" height="378" key="GridCell.Tab.0.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.0.left/72.27.1464.837@72.27.1464.837" timestamp="1592368284172" />
-    <state width="1441" height="254" key="GridCell.Tab.0.right" timestamp="1592368284174">
+    <state width="1441" height="254" key="GridCell.Tab.0.left/72.27.1464.837@72.27.1464.837" timestamp="1592377970219" />
+    <state width="1441" height="254" key="GridCell.Tab.0.right" timestamp="1592377970220">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
     <state width="1222" height="378" key="GridCell.Tab.0.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.0.right/72.27.1464.837@72.27.1464.837" timestamp="1592368284174" />
-    <state width="1441" height="254" key="GridCell.Tab.1.bottom" timestamp="1592368284185">
+    <state width="1441" height="254" key="GridCell.Tab.0.right/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
+    <state width="1441" height="254" key="GridCell.Tab.1.bottom" timestamp="1592377970220">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591679426165" />
     <state width="1222" height="378" key="GridCell.Tab.1.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.1.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592368284185" />
-    <state width="1441" height="254" key="GridCell.Tab.1.center" timestamp="1592368284175">
+    <state width="1441" height="254" key="GridCell.Tab.1.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
+    <state width="1441" height="254" key="GridCell.Tab.1.center" timestamp="1592377970220">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1591679426164" />
     <state width="1222" height="378" key="GridCell.Tab.1.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.1.center/72.27.1464.837@72.27.1464.837" timestamp="1592368284175" />
-    <state width="1441" height="254" key="GridCell.Tab.1.left" timestamp="1592368284174">
+    <state width="1441" height="254" key="GridCell.Tab.1.center/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
+    <state width="1441" height="254" key="GridCell.Tab.1.left" timestamp="1592377970220">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1591679426164" />
     <state width="1222" height="378" key="GridCell.Tab.1.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.1.left/72.27.1464.837@72.27.1464.837" timestamp="1592368284174" />
-    <state width="1441" height="254" key="GridCell.Tab.1.right" timestamp="1592368284184">
+    <state width="1441" height="254" key="GridCell.Tab.1.left/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
+    <state width="1441" height="254" key="GridCell.Tab.1.right" timestamp="1592377970220">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1591679426165" />
     <state width="1222" height="378" key="GridCell.Tab.1.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.1.right/72.27.1464.837@72.27.1464.837" timestamp="1592368284184" />
+    <state width="1441" height="254" key="GridCell.Tab.1.right/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
     <state x="233" y="22" width="1016" height="742" key="SettingsEditor" timestamp="1592360760258">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
@@ -348,11 +342,11 @@
       <screen x="0" y="0" width="1280" height="693" />
     </state>
     <state x="432" y="204" key="scopes/0.0.1280.693@0.0.1280.693" timestamp="1591272645804" />
-    <state x="419" y="44" width="769" height="819" key="search.everywhere.popup" timestamp="1592366566786">
+    <state x="419" y="44" width="769" height="819" key="search.everywhere.popup" timestamp="1592380256490">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state x="303" y="14" width="672" height="678" key="search.everywhere.popup/0.0.1280.693@0.0.1280.693" timestamp="1591331450855" />
-    <state x="419" y="44" width="769" height="819" key="search.everywhere.popup/72.27.1464.837@72.27.1464.837" timestamp="1592366566786" />
+    <state x="419" y="44" width="769" height="819" key="search.everywhere.popup/72.27.1464.837@72.27.1464.837" timestamp="1592380256490" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,6 +4,7 @@ import cv2
 from scipy.io import wavfile
 import imageio
 import subprocess
+from librosa.output import write_wav
 
 # import sys
 # dir_med = r'/home/avi/Documents/code/projects/mediaio'
@@ -27,9 +28,12 @@ class AudioSignal:
         aud, _ = separate_streams(mp4_path)
         return AudioSignal(aud.ts, aud.fps)
 
-    def save_to_wav_file(self, wave_file_path, sample_type=np.int16):
-        self.set_sample_type(sample_type)
-        wavfile.write(wave_file_path, self._sample_rate, self._data)
+    # def save_to_wav_file(self, wave_file_path, sample_type=np.int16):
+    #     self.set_sample_type(sample_type)
+    #     wavfile.write(wave_file_path, self._sample_rate, self._data)
+
+    def save_to_wav_file(self, wave_file_path):
+        write_wav(wave_file_path, self._data, self._sample_rate)
 
     def get_data(self, channel_index=None):
         # data shape: (n_samples) or (n_samples, n_channels)
