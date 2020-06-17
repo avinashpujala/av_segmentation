@@ -20,12 +20,8 @@ cd av_segmentation
 conda env create -f environment/av_segmentaton.yml
 conda activate av_segmentation
 ```
-In addition, requires ```mediaio``` from https://github.com/avivga/mediaio.git
-```
-git clone --single-branch -branch --depth 1  https://github.com/avivga/mediaio.git
-cd mediaio
-python setup.py --user
-```
+NB: When installing ```librosa >=0.5.1``` make sure that ```numba``` version is compatible.
+```pip install numba==0.48```
 
 For training the model specifically on human speech, which involves face detection in the pipeline, install CMake and follow that with
 ```python -m pip install face-recognition```

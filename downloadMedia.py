@@ -6,7 +6,7 @@ import numpy as np
 from util.fileTools import get_files
 
 
-def download_av_speech(path_to_csv, out_dir='train', n_files=270000):
+def download_from_path_in_csv(path_to_csv, out_dir='train', n_files=270000):
     """
     Downloads AVSpeech Dataset
     https://looking-to-listen.github.io/avspeech/download.html

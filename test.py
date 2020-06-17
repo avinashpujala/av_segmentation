@@ -1,16 +1,15 @@
-import pandas as pd
-import glob
+import preProcess
+import readWriteMedia
+import time
+import importlib
 import os
-import downloadMedia
+importlib.reload(preProcess)
 
+movDir = '/home/avi/Downloads'
+movName = '--80gIqjPgs_215.982433_220.286733.mp4'
+movPath = os.path.join(movDir, movName)
 
-dir_csv = '/home/ubuntu/avinash/code/projects/av_segmentation/data_csv'
-dir_out = r'/home/ubuntu/avinash/vol_ebs/audioset'
+# mov_stack, fps = preProcess.preprocess_video_sample(movPath)
+aud, vid = readWriteMedia.separate_streams(movPath)
 
-path_csv = os.path.join(dir_csv, 'balanced_train_segments.csv')
-
-
-df_as = pd.read_csv(os.path.join(dir_csv, 'balanced_train_segments.csv'), header=None,
-                    names=['yt_id', 'start_time', 'stop_time', 'label'])
-
-# downloadMedia.download_av_speech(path_csv, dir_out, n_files=len(df_as))
+aud_signal = readWriteMedia.AudioSignal(aud.ts, aud.fps)

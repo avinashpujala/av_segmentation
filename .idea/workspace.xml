@@ -59,17 +59,17 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings module-name="av_segmentation" sdk-home="C:\Users\Avi\anaconda3\envs\av_segmentation\python.exe" working-directory="$PROJECT_DIR$">
+      <console-settings module-name="av_segmentation" is-module-sdk="true" working-directory="$PROJECT_DIR$">
         <envs>
           <env key="PATH" value="C:\Users\Avi\anaconda3\envs\av_segmentation;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\mingw-w64\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\usr\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Scripts;C:\Users\Avi\anaconda3\envs\av_segmentation\bin;C:\Users\Avi\anaconda3\condabin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\PuTTY;C:\Program Files\Amazon\AWSCLIV2;C:\Users\Avi\AppData\Local\Microsoft\WindowsApps;C:\Users\Avi\AppData\Local\atom\bin;C:\Program Files\JetBrains\PyCharm Community Edition with Anaconda plugin 2020.1.1\bin;.;C:\Users\Avi\Downloads\wget-1.20.3-win64;  " />
         </envs>
-        <option name="mySdkHome" value="C:\Users\Avi\anaconda3\envs\av_segmentation\python.exe" />
+        <option name="myUseModuleSdk" value="true" />
         <option name="myModuleName" value="av_segmentation" />
         <option name="myEnvs">
           <map>
@@ -86,7 +86,7 @@
       <recent name="E:\Avinash\miscellaneous\project\av_segmentation\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test (1)">
+  <component name="RunManager" selected="Python.preProcess">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +109,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="downloadMedia (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="download_vids_from_ytid_in_csv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,7 +122,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/downloadMedia.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/download_vids_from_ytid_in_csv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,20 +131,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="downloadMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="preProcess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Avi\Google Drive\Code\projects\av_segmentation\downloadMedia.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preProcess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,20 +150,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="processMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="readWriteMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/processMedia.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/readWriteMedia.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -220,19 +214,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.downloadMedia (1)" />
-      <item itemvalue="Python.downloadMedia" />
-      <item itemvalue="Python.processMedia" />
-      <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.download_vids_from_ytid_in_csv" />
+      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.readWriteMedia" />
+      <item itemvalue="Python.preProcess" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.preProcess" />
+        <item itemvalue="Python.readWriteMedia" />
         <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.processMedia" />
+        <item itemvalue="Python.download_vids_from_ytid_in_csv" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.downloadMedia" />
-        <item itemvalue="Python.downloadMedia (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -292,51 +286,60 @@
     <state x="90" y="76" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591669206420" />
     <state x="455" y="91" key="FileChooserDialogImpl/0.0.1280.693@0.0.1280.693" timestamp="1591272169449" />
     <state x="175" y="116" width="424" height="525" key="FileChooserDialogImpl/72.27.1464.837@72.27.1464.837" timestamp="1592032402037" />
-    <state width="1224" height="185" key="GridCell.Tab.0.bottom" timestamp="1591679426163">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.0.bottom" timestamp="1592368284174">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
     <state width="1222" height="378" key="GridCell.Tab.0.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.0.center" timestamp="1591679426163">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.0.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592368284174" />
+    <state width="1441" height="254" key="GridCell.Tab.0.center" timestamp="1592368284173">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
     <state width="1222" height="378" key="GridCell.Tab.0.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.0.left" timestamp="1591679426162">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.0.center/72.27.1464.837@72.27.1464.837" timestamp="1592368284173" />
+    <state width="1441" height="254" key="GridCell.Tab.0.left" timestamp="1592368284172">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591679426162" />
     <state width="1222" height="378" key="GridCell.Tab.0.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.0.right" timestamp="1591679426163">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.0.left/72.27.1464.837@72.27.1464.837" timestamp="1592368284172" />
+    <state width="1441" height="254" key="GridCell.Tab.0.right" timestamp="1592368284174">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
     <state width="1222" height="378" key="GridCell.Tab.0.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.1.bottom" timestamp="1591679426165">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.0.right/72.27.1464.837@72.27.1464.837" timestamp="1592368284174" />
+    <state width="1441" height="254" key="GridCell.Tab.1.bottom" timestamp="1592368284185">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591679426165" />
     <state width="1222" height="378" key="GridCell.Tab.1.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.1.center" timestamp="1591679426164">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.1.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592368284185" />
+    <state width="1441" height="254" key="GridCell.Tab.1.center" timestamp="1592368284175">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1591679426164" />
     <state width="1222" height="378" key="GridCell.Tab.1.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.1.left" timestamp="1591679426164">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.1.center/72.27.1464.837@72.27.1464.837" timestamp="1592368284175" />
+    <state width="1441" height="254" key="GridCell.Tab.1.left" timestamp="1592368284174">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1591679426164" />
     <state width="1222" height="378" key="GridCell.Tab.1.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.1.right" timestamp="1591679426165">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.1.left/72.27.1464.837@72.27.1464.837" timestamp="1592368284174" />
+    <state width="1441" height="254" key="GridCell.Tab.1.right" timestamp="1592368284184">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state width="1224" height="185" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1591679426165" />
     <state width="1222" height="378" key="GridCell.Tab.1.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state x="141" y="0" key="SettingsEditor" timestamp="1591587490936">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1441" height="254" key="GridCell.Tab.1.right/72.27.1464.837@72.27.1464.837" timestamp="1592368284184" />
+    <state x="233" y="22" width="1016" height="742" key="SettingsEditor" timestamp="1592360760258">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1591587490936" />
     <state x="141" y="0" key="SettingsEditor/0.0.1280.693@0.0.1280.693" timestamp="1591268277917" />
+    <state x="233" y="22" width="1016" height="742" key="SettingsEditor/72.27.1464.837@72.27.1464.837" timestamp="1592360760258" />
     <state x="204" y="74" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1591318439655">
       <screen x="0" y="0" width="1280" height="693" />
     </state>
@@ -345,10 +348,11 @@
       <screen x="0" y="0" width="1280" height="693" />
     </state>
     <state x="432" y="204" key="scopes/0.0.1280.693@0.0.1280.693" timestamp="1591272645804" />
-    <state x="303" y="14" width="672" height="678" key="search.everywhere.popup" timestamp="1591331450855">
-      <screen x="0" y="0" width="1280" height="693" />
+    <state x="419" y="44" width="769" height="819" key="search.everywhere.popup" timestamp="1592366566786">
+      <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state x="303" y="14" width="672" height="678" key="search.everywhere.popup/0.0.1280.693@0.0.1280.693" timestamp="1591331450855" />
+    <state x="419" y="44" width="769" height="819" key="search.everywhere.popup/72.27.1464.837@72.27.1464.837" timestamp="1592366566786" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

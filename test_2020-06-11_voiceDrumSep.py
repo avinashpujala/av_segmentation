@@ -1,4 +1,4 @@
-import processMedia
+import readWriteMedia
 import downloadMedia
 import os
 import numpy as np
@@ -32,4 +32,4 @@ path_to_mov = os.path.join(outDir, 'movie.mp4')
 # downloadMedia.yt_vid_to_mp4(yt_url, path_to_mov,
 #                             start_time=t_start, stop_time=t_end)
 
-aud, vid = processMedia.separate_streams(path_to_mov)
+aud, vid = readWriteMedia.separate_streams(path_to_mov)
