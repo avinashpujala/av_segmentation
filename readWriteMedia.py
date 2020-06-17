@@ -5,13 +5,7 @@ from scipy.io import wavfile
 import imageio
 import subprocess
 from librosa.output import write_wav
-
-# import sys
-# dir_med = r'/home/avi/Documents/code/projects/mediaio'
-# if dir_med not in sys.path:
-#     sys.path.append(dir_med)
-# from mediaio import audio_io, video_io #noqa
-
+#Test
 
 class AudioSignal:
     def __init__(self, data, sample_rate):
