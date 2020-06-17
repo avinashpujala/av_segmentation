@@ -192,12 +192,16 @@ dependencies:
   - xorg-xextproto=7.3.0=h14c3975_1002
   - xorg-xproto=7.0.31=h14c3975_1007
   - xz=5.2.5=h7b6447c_0
+<<<<<<< HEAD
   - youtube-dl=2020.6.6=py38h32f6830_0
+=======
+>>>>>>> Branched for EC2
   - zeromq=4.3.1=he6710b0_3
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h7b6447c_3
   - zstd=1.4.4=h0b5b093_3
   - pip:
+<<<<<<< HEAD
     - audioread==2.1.8
     - ffmpeg-python==0.2.0
     - future==0.18.2
@@ -213,4 +217,10 @@ dependencies:
     - soundfile==0.10.3.post1
     - threadpoolctl==2.1.0
 prefix: /home/avi/anaconda3/envs/av_segmentation
+=======
+    - keras==2.3.1
+    - keras-applications==1.0.8
+    - pyyaml==5.3.1
+prefix: /home/ubuntu/anaconda3/envs/av_segmentation
+>>>>>>> Branched for EC2
 

@@ -1,9 +1,16 @@
 import glob
 from os.path import join
+<<<<<<< HEAD
 import readWriteMedia
 import numpy as np
 import importlib
 importlib.reload(readWriteMedia)
+=======
+import processMedia
+import numpy as np
+import importlib
+importlib.reload(processMedia)
+>>>>>>> Branched for EC2
 import matplotlib.pyplot as plt
 
 idx = 0
@@ -11,7 +18,11 @@ dir_vids = r'C:\Users\Avi\Google Drive\Code\projects\av_segmentation\data\avspee
 filePaths = glob.glob(join(dir_vids, '*.mp4'))
 fp = filePaths[idx]
 # fp = join(dir_vids, '_-_1K9uCid4_270.067000_275.767000.mp4')
+<<<<<<< HEAD
 aud, vid = readWriteMedia.separate_streams(fp)
+=======
+aud, vid = processMedia.separate_streams(fp)
+>>>>>>> Branched for EC2
 imgs_sub = vid.imgs[:, ::2, ::2]
 dImgs = np.gradient(imgs_sub, axis=0).astype(imgs_sub.dtype)
 dImgs2 = np.gradient(imgs_sub-imgs_sub.mean(), axis=0).astype(imgs_sub.dtype)
