@@ -13,11 +13,8 @@
 #media files
 *.wav
 *.mp4
-<<<<<<< HEAD
-=======
 **/*.wav
 **/*.mp4
->>>>>>> 547c1ee8c9a3602499b65acf185890f8aa8a770e
 
 
 #pyCharm
@@ -25,7 +22,6 @@
 
 # Notebook checkpoints
 .ipynb_checkpoints/*
-<<<<<<< HEAD
 
 # CSV files
 *.csv
@@ -39,5 +35,4 @@ data_csv/*
 **/*.csv
 /data_csv/**
 data_csv/**
->>>>>>> 547c1ee8c9a3602499b65acf185890f8aa8a770e
 
