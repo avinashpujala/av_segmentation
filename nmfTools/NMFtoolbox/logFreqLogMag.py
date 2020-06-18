@@ -31,7 +31,7 @@
 
 import numpy as np
 
-from midi2freq import midi2freq
+from nmfTools.NMFtoolbox.midi2freq import midi2freq
 
 
 def logFreqLogMag(A, deltaF, binsPerOctave=36.0, upperFreq=22050.0, lowerFreq=midi2freq(24), logComp=1.0):

@@ -84,7 +84,8 @@ def audio_decoder(embedding, batch_norm_kwargs=dict(), leaky_relu_kwargs=dict())
     return x
 
 
-def video_encoder(video_input, dropout=0.3, batch_norm_kwargs=dict(), leaky_relu_kwargs=dict()):
+def video_encoder(video_input, dropout=0.3, batch_norm_kwargs=dict(),
+                  leaky_relu_kwargs=dict()):
     """
     Encoder for embedding video input
     Parameters
@@ -253,7 +254,8 @@ class NeuralNetwork(object):
         validation_speech_spectrograms = np.expand_dims(validation_speech_spectrograms, -1)
 
         verbose = train_kwargs.get('verbose', 1)
-        checkpoint = ModelCheckpoint(model_cache_path, verbose=verbose)
+        checkpoint = ModelCheckpoint(model_cache_path, verbose=verbose,
+                                     save_best_only=True)
         lr_decay = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5,
                                      min_lr=0, verbose=verbose)
         early_stopping = EarlyStopping(monitor='val_loss', min_delta=0.01,
@@ -269,7 +271,7 @@ class NeuralNetwork(object):
                                           validation_speech_spectrograms),
                          batch_size=batch_size, epochs=epochs,
                          callbacks=[checkpoint, lr_decay, early_stopping, tensorboard],
-                         verbose=verbose)
+                         verbose=verbose, **train_kwargs)
 
     def predict(self, mixed_spectrograms, video_samples):
         mixed_spectrograms = np.expand_dims(mixed_spectrograms, -1)  # append channels axis

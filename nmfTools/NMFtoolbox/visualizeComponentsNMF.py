@@ -35,9 +35,9 @@ import matplotlib.pyplot as plt
 from copy import deepcopy
 # import nmfTools.NMFtoolbox as NMFtoolbox
 
-from logFreqLogMag import logFreqLogMag
-from utils import EPS
-from coloredComponents import coloredComponents
+from nmfTools.NMFtoolbox.logFreqLogMag import logFreqLogMag
+from nmfTools.utils import EPS
+from nmfTools.NMFtoolbox.coloredComponents import coloredComponents
 
 
 def visualizeComponentsNMF(V, W, H, compV=None, parameter=None):

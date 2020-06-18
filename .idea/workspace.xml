@@ -16,18 +16,28 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9031a1c3-c104-4146-bb12-858f3fd2c0e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/avspeech/train/bad_files.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a4946cd1-24d0-4c91-b497-0aeb52a6db10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/create_data_for_training.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/streamlit_demo_20200618.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/av_segmentation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/av_segmentation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Looking to Listen - Noisy cafeteria-uKwUL7vt03M.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment/av_segmentation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/environment/av_segmentation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment/av_segmentation_ubuntu.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/.ipynb_checkpoints/asfv-checkpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/.ipynb_checkpoints/audio_encoder-checkpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/asfv.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/asfv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nmfTools/NMFtoolbox/coloredComponents.py" beforeDir="false" afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/coloredComponents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nmfTools/NMFtoolbox/logFreqLogMag.py" beforeDir="false" afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/logFreqLogMag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nmfTools/NMFtoolbox/visualizeComponentsNMF.py" beforeDir="false" afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/visualizeComponentsNMF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_2020-06-11_voiceDrumSep.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_2020-06-11_voiceDrumSep.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,54 +54,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="260c3646-9413-424b-a900-b6f9f2ffbd6f" />
-  <component name="ProjectId" id="1cqJ1DuHWWxalAoYIzCQwuiBlpe" />
+  <component name="ProjectId" id="1dTsY84EzQPB0noADCaZOPvIdEi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-<<<<<<< HEAD
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../python/my-code/apCode" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
->>>>>>> Installed pygame
+    <property name="settings.editor.selected.configurable" value="pyconsole" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="av_segmentation" is-module-sdk="true" working-directory="$PROJECT_DIR$">
-        <envs>
-          <env key="PATH" value="C:\Users\Avi\anaconda3\envs\av_segmentation;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\mingw-w64\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\usr\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Scripts;C:\Users\Avi\anaconda3\envs\av_segmentation\bin;C:\Users\Avi\anaconda3\condabin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\PuTTY;C:\Program Files\Amazon\AWSCLIV2;C:\Users\Avi\AppData\Local\Microsoft\WindowsApps;C:\Users\Avi\AppData\Local\atom\bin;C:\Program Files\JetBrains\PyCharm Community Edition with Anaconda plugin 2020.1.1\bin;.;C:\Users\Avi\Downloads\wget-1.20.3-win64;  " />
-        </envs>
         <option name="myUseModuleSdk" value="true" />
         <option name="myModuleName" value="av_segmentation" />
-        <option name="myEnvs">
-          <map>
-            <entry key="PATH" value="C:\Users\Avi\anaconda3\envs\av_segmentation;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\mingw-w64\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\usr\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Library\bin;C:\Users\Avi\anaconda3\envs\av_segmentation\Scripts;C:\Users\Avi\anaconda3\envs\av_segmentation\bin;C:\Users\Avi\anaconda3\condabin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\PuTTY;C:\Program Files\Amazon\AWSCLIV2;C:\Users\Avi\AppData\Local\Microsoft\WindowsApps;C:\Users\Avi\AppData\Local\atom\bin;C:\Program Files\JetBrains\PyCharm Community Edition with Anaconda plugin 2020.1.1\bin;.;C:\Users\Avi\Downloads\wget-1.20.3-win64;  " />
-          </map>
-        </option>
         <option name="myWorkingDirectory" value="$PROJECT_DIR$" />
       </console-settings>
     </option>
     <option name="myUseExistingConsole" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Avinash\miscellaneous\project\av_segmentation\tests" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.asfv">
+  <component name="RunManager" selected="Python.test_2020-06-11_voiceDrumSep">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,7 +86,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -118,7 +105,10 @@
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/networks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -133,20 +123,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="download_vids_from_ytid_in_csv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="coloredComponents" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nmfTools/NMFtoolbox" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/download_vids_from_ytid_in_csv.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nmfTools/NMFtoolbox/coloredComponents.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,49 +145,14 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="preProcess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preProcess.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="readWriteMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="av_segmentation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/readWriteMedia.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="av_segmentation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="E:\Avinash\downloads\Anaconda3\envs\avsource\python.exe" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -212,20 +167,61 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_2020-06-11_voiceDrumSep" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_2020-06-11_voiceDrumSep.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="visualizeComponentsNMF" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nmfTools/NMFtoolbox" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nmfTools/NMFtoolbox/visualizeComponentsNMF.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.download_vids_from_ytid_in_csv" />
-      <item itemvalue="Python.test (1)" />
-      <item itemvalue="Python.readWriteMedia" />
-      <item itemvalue="Python.preProcess" />
       <item itemvalue="Python.asfv" />
+      <item itemvalue="Python.coloredComponents" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.test_2020-06-11_voiceDrumSep" />
+      <item itemvalue="Python.visualizeComponentsNMF" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_2020-06-11_voiceDrumSep" />
+        <item itemvalue="Python.visualizeComponentsNMF" />
+        <item itemvalue="Python.coloredComponents" />
         <item itemvalue="Python.asfv" />
-        <item itemvalue="Python.preProcess" />
-        <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.readWriteMedia" />
-        <item itemvalue="Python.download_vids_from_ytid_in_csv" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -234,12 +230,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9031a1c3-c104-4146-bb12-858f3fd2c0e7" name="Default Changelist" comment="" />
-      <created>1591249972865</created>
+      <changelist id="a4946cd1-24d0-4c91-b497-0aeb52a6db10" name="Default Changelist" comment="" />
+      <created>1592460461947</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1591249972865</updated>
-      <workItem from="1592032201318" duration="233000" />
+      <updated>1592460461947</updated>
+      <workItem from="1592460463823" duration="5519000" />
+      <workItem from="1592469187400" duration="2589000" />
     </task>
     <servers />
   </component>
@@ -251,179 +248,65 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-      <path value="$PROJECT_DIR$/multisensory" />
-      <path value="$PROJECT_DIR$/nussl" />
-    </ignored-roots>
-  </component>
   <component name="WindowStateProjectService">
-    <state x="134" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591592806202">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="134" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1591592806202" />
-    <state x="188" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.693@0.0.1280.693" timestamp="1591272869429" />
-    <state x="375" y="147" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591321456132">
-      <screen x="0" y="0" width="1280" height="693" />
-    </state>
-    <state x="375" y="147" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.693@0.0.1280.693" timestamp="1591321456132" />
-    <state x="508" y="91" key="EnvironmentVariablesDialog" timestamp="1591587022243">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="508" y="91" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1591587022243" />
-<<<<<<< HEAD
-    <state x="175" y="116" width="424" height="525" key="FileChooserDialogImpl" timestamp="1592032402037">
-      <screen x="72" y="27" width="1464" height="837" />
-=======
-    <state x="90" y="76" key="FileChooserDialogImpl" timestamp="1591669206420">
-      <screen x="0" y="0" width="1280" height="680" />
->>>>>>> Installed pygame
-    </state>
-    <state x="90" y="76" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591669206420" />
-    <state x="455" y="91" key="FileChooserDialogImpl/0.0.1280.693@0.0.1280.693" timestamp="1591272169449" />
-<<<<<<< HEAD
-    <state x="175" y="116" width="424" height="525" key="FileChooserDialogImpl/72.27.1464.837@72.27.1464.837" timestamp="1592032402037" />
-    <state width="1441" height="254" key="GridCell.Tab.0.bottom" timestamp="1592377970220">
+    <state x="393" y="76" width="887" height="689" key="#Deployment" timestamp="1592467700966">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1224" height="185" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
-    <state width="1222" height="378" key="GridCell.Tab.0.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.0.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
-    <state width="1441" height="254" key="GridCell.Tab.0.center" timestamp="1592377970219">
+    <state x="393" y="76" width="887" height="689" key="#Deployment/72.27.1464.837@72.27.1464.837" timestamp="1592467700966" />
+    <state x="668" y="293" width="679" height="445" key="#Notifications" timestamp="1592460485120">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1224" height="185" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
-    <state width="1222" height="378" key="GridCell.Tab.0.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.0.center/72.27.1464.837@72.27.1464.837" timestamp="1592377970219" />
-    <state width="1441" height="254" key="GridCell.Tab.0.left" timestamp="1592377970219">
+    <state x="668" y="293" width="679" height="445" key="#Notifications/72.27.1464.837@72.27.1464.837" timestamp="1592460485120" />
+    <state x="398" y="107" width="808" height="689" key="#Options" timestamp="1592467457957">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1224" height="185" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591679426162" />
-    <state width="1222" height="378" key="GridCell.Tab.0.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.0.left/72.27.1464.837@72.27.1464.837" timestamp="1592377970219" />
-    <state width="1441" height="254" key="GridCell.Tab.0.right" timestamp="1592377970220">
+    <state x="398" y="107" width="808" height="689" key="#Options/72.27.1464.837@72.27.1464.837" timestamp="1592467457957" />
+    <state x="257" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592461105118">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1224" height="185" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
-    <state width="1222" height="378" key="GridCell.Tab.0.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.0.right/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
-    <state width="1441" height="254" key="GridCell.Tab.1.bottom" timestamp="1592377970220">
+    <state x="257" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1464.837@72.27.1464.837" timestamp="1592461105118" />
+    <state x="581" y="171" width="424" height="496" key="FileChooserDialogImpl" timestamp="1592469028529">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1224" height="185" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591679426165" />
-    <state width="1222" height="378" key="GridCell.Tab.1.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.1.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
-    <state width="1441" height="254" key="GridCell.Tab.1.center" timestamp="1592377970220">
+    <state x="581" y="171" width="424" height="496" key="FileChooserDialogImpl/72.27.1464.837@72.27.1464.837" timestamp="1592469028529" />
+    <state width="1379" height="189" key="GridCell.Tab.0.bottom" timestamp="1592461561521">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1224" height="185" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1591679426164" />
-    <state width="1222" height="378" key="GridCell.Tab.1.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.1.center/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
-    <state width="1441" height="254" key="GridCell.Tab.1.left" timestamp="1592377970220">
+    <state width="1379" height="189" key="GridCell.Tab.0.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592461561521" />
+    <state width="1379" height="189" key="GridCell.Tab.0.center" timestamp="1592461561514">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1224" height="185" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1591679426164" />
-    <state width="1222" height="378" key="GridCell.Tab.1.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.1.left/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
-    <state width="1441" height="254" key="GridCell.Tab.1.right" timestamp="1592377970220">
-      <screen x="72" y="27" width="1464" height="837" />
-=======
-    <state width="1224" height="185" key="GridCell.Tab.0.bottom" timestamp="1591679426163">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1224" height="185" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
-    <state width="1222" height="378" key="GridCell.Tab.0.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.0.center" timestamp="1591679426163">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1224" height="185" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
-    <state width="1222" height="378" key="GridCell.Tab.0.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.0.left" timestamp="1591679426162">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1224" height="185" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591679426162" />
-    <state width="1222" height="378" key="GridCell.Tab.0.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.0.right" timestamp="1591679426163">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1224" height="185" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591679426163" />
-    <state width="1222" height="378" key="GridCell.Tab.0.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.1.bottom" timestamp="1591679426165">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1224" height="185" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591679426165" />
-    <state width="1222" height="378" key="GridCell.Tab.1.bottom/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.1.center" timestamp="1591679426164">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1224" height="185" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1591679426164" />
-    <state width="1222" height="378" key="GridCell.Tab.1.center/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.1.left" timestamp="1591679426164">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1224" height="185" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1591679426164" />
-    <state width="1222" height="378" key="GridCell.Tab.1.left/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1224" height="185" key="GridCell.Tab.1.right" timestamp="1591679426165">
-      <screen x="0" y="0" width="1280" height="680" />
->>>>>>> Attempting to incorporate face detection optional pipeline
-    </state>
-    <state width="1224" height="185" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1591679426165" />
-    <state width="1222" height="378" key="GridCell.Tab.1.right/0.0.1280.693@0.0.1280.693" timestamp="1591339616097" />
-    <state width="1441" height="254" key="GridCell.Tab.1.right/72.27.1464.837@72.27.1464.837" timestamp="1592377970220" />
-    <state x="233" y="22" width="1016" height="742" key="SettingsEditor" timestamp="1592360760258">
+    <state width="1379" height="189" key="GridCell.Tab.0.center/72.27.1464.837@72.27.1464.837" timestamp="1592461561514" />
+    <state width="1379" height="189" key="GridCell.Tab.0.left" timestamp="1592461561511">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1591587490936" />
-    <state x="141" y="0" key="SettingsEditor/0.0.1280.693@0.0.1280.693" timestamp="1591268277917" />
-    <state x="233" y="22" width="1016" height="742" key="SettingsEditor/72.27.1464.837@72.27.1464.837" timestamp="1592360760258" />
-    <state x="204" y="74" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1591318439655">
-      <screen x="0" y="0" width="1280" height="693" />
-    </state>
-    <state x="204" y="74" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.693@0.0.1280.693" timestamp="1591318439655" />
-    <state x="432" y="204" key="scopes" timestamp="1591272645804">
-      <screen x="0" y="0" width="1280" height="693" />
-    </state>
-    <state x="432" y="204" key="scopes/0.0.1280.693@0.0.1280.693" timestamp="1591272645804" />
-    <state x="419" y="44" width="769" height="819" key="search.everywhere.popup" timestamp="1592380256490">
+    <state width="1379" height="189" key="GridCell.Tab.0.left/72.27.1464.837@72.27.1464.837" timestamp="1592461561511" />
+    <state width="1379" height="189" key="GridCell.Tab.0.right" timestamp="1592461561517">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state x="303" y="14" width="672" height="678" key="search.everywhere.popup/0.0.1280.693@0.0.1280.693" timestamp="1591331450855" />
-    <state x="419" y="44" width="769" height="819" key="search.everywhere.popup/72.27.1464.837@72.27.1464.837" timestamp="1592380256490" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/sep_video_script.py</url>
-          <line>310</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/multisensory/src/sourcesep.py</url>
-          <line>827</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/multisensory/src/shift_net.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
+    <state width="1379" height="189" key="GridCell.Tab.0.right/72.27.1464.837@72.27.1464.837" timestamp="1592461561517" />
+    <state x="287" y="24" width="1016" height="742" key="SettingsEditor" timestamp="1592470132811">
+      <screen x="72" y="27" width="1464" height="837" />
+    </state>
+    <state x="287" y="24" width="1016" height="742" key="SettingsEditor/72.27.1464.837@72.27.1464.837" timestamp="1592470132811" />
   </component>
 </project>
