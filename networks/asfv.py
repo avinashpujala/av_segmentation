@@ -137,11 +137,6 @@ def video_encoder(video_input, dropout=0.3, batch_norm_kwargs=dict(), leaky_relu
 class NeuralNetwork(object):
     def __init__(self, model):
         self.__model = model
-<<<<<<< HEAD
-        self.__batch_norm_kwargs=batch_norm_kwargs
-        self.__leaky_relu_kwwargs=leaky_relu_kwargs
-=======
->>>>>>> 547c1ee8c9a3602499b65acf185890f8aa8a770e
 
     @classmethod
     def __build_encoder(cls, vid_shape, aud_spec_shape_ext, batch_norm_kwargs=dict(),
