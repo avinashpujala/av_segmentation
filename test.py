@@ -1,14 +1,11 @@
 import preProcess
 import readWriteMedia
-<<<<<<< HEAD
-=======
 from networks.asfv import NeuralNetwork as nn
->>>>>>> 547c1ee8c9a3602499b65acf185890f8aa8a770e
 import time
 import importlib
 import os
 import glob
-<<<<<<< HEAD
+
 # from nmfTools.NMFtoolbox import forwardSTFT
 importlib.reload(preProcess)
 importlib.reload(readWriteMedia)
@@ -32,11 +29,8 @@ out['mixed_signal'].save_to_wav_file(os.path.join(movDir, 'mixed.wav'))
 # yt_url = r'https://www.youtube.com/watch?v=fregObNcHC8'
 # yt_url = yt_url.split('?v=')[-1]
 """
-=======
+
 importlib.reload(preProcess)
 importlib.reload(readWriteMedia)
 
-
-
->>>>>>> 547c1ee8c9a3602499b65acf185890f8aa8a770e
 
