@@ -240,16 +240,20 @@ dependencies:
     - librosa==0.7.2
     - llvmlite==0.31.0
     - matplotlib==3.2.1
+    - networkx==2.4
     - numba==0.48.0
     - pathtools==0.1.2
     - pydeck==0.4.0b2
+    - pywavelets==1.1.1
     - pyyaml==5.3.1
     - resampy==0.2.2
     - s3transfer==0.3.3
+    - scikit-image==0.17.2
     - scikit-learn==0.23.1
     - soundfile==0.10.3.post1
     - streamlit==0.61.0
     - threadpoolctl==2.1.0
+    - tifffile==2020.6.3
     - toml==0.10.1
     - tornado==5.1.1
     - tzlocal==2.1
