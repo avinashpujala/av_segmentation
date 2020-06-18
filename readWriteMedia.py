@@ -6,12 +6,15 @@ import imageio
 import subprocess
 from librosa.output import write_wav
 
+<<<<<<< HEAD
 # import sys
 # dir_med = r'/home/avi/Documents/code/projects/mediaio'
 # if dir_med not in sys.path:
 #     sys.path.append(dir_med)
 # from mediaio import audio_io, video_io #noqa
 
+=======
+>>>>>>> 547c1ee8c9a3602499b65acf185890f8aa8a770e
 
 class AudioSignal:
     def __init__(self, data, sample_rate):
@@ -195,6 +198,7 @@ class VideoFileReader:
         self._video_fd.close()
 
     def read_all_frames(self, convert_to_gray_scale=False):
+<<<<<<< HEAD
         # if convert_to_gray_scale:
         #     video_shape = (self.get_frame_count(), self.get_frame_height(), self.get_frame_width())
         # else:
@@ -204,6 +208,10 @@ class VideoFileReader:
         mov = []
         for i in range(self.get_frame_count()):
             # frames[i, ] = self.read_next_frame(convert_to_gray_scale=convert_to_gray_scale)
+=======
+        mov = []
+        for i in range(self.get_frame_count()):
+>>>>>>> 547c1ee8c9a3602499b65acf185890f8aa8a770e
             mov.append(self._video_fd.get_data(i))
         mov = np.array(mov, dtype=np.uint8)
         if convert_to_gray_scale:

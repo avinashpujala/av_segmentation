@@ -65,4 +65,7 @@ def gray2rgb(imgs):
 def rgb2gray(imgs):
     imgs = [cv2.cvtColor(img, cv2.COLOR_RGB2GRAY) for img in imgs]
     return np.array(imgs)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 547c1ee8c9a3602499b65acf185890f8aa8a770e
