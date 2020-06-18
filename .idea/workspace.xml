@@ -25,20 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4946cd1-24d0-4c91-b497-0aeb52a6db10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/create_data_for_training.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/streamlit_demo_20200618.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/av_segmentation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/av_segmentation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/.ipynb_checkpoints/asfv-checkpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/.ipynb_checkpoints/audio_encoder-checkpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/asfv.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/asfv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nmfTools/NMFtoolbox/coloredComponents.py" beforeDir="false" afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/coloredComponents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nmfTools/NMFtoolbox/logFreqLogMag.py" beforeDir="false" afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/logFreqLogMag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nmfTools/NMFtoolbox/visualizeComponentsNMF.py" beforeDir="false" afterPath="$PROJECT_DIR$/nmfTools/NMFtoolbox/visualizeComponentsNMF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_2020-06-11_voiceDrumSep.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_2020-06-11_voiceDrumSep.py" afterDir="false" />
-    </list>
+    <list default="true" id="a4946cd1-24d0-4c91-b497-0aeb52a6db10" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +223,7 @@
       <option name="presentableId" value="Default" />
       <updated>1592460461947</updated>
       <workItem from="1592460463823" duration="5519000" />
-      <workItem from="1592469187400" duration="2589000" />
+      <workItem from="1592469187400" duration="3034000" />
     </task>
     <servers />
   </component>
