@@ -5,7 +5,7 @@ from scipy.io import wavfile
 import imageio
 import subprocess
 from librosa.output import write_wav
-#Test
+
 
 class AudioSignal:
     def __init__(self, data, sample_rate):
@@ -189,15 +189,8 @@ class VideoFileReader:
         self._video_fd.close()
 
     def read_all_frames(self, convert_to_gray_scale=False):
-        # if convert_to_gray_scale:
-        #     video_shape = (self.get_frame_count(), self.get_frame_height(), self.get_frame_width())
-        # else:
-        #     video_shape = (self.get_frame_count(), self.get_frame_height(), self.get_frame_width(), 3)
-
-        # frames = np.ndarray(shape=video_shape, dtype=np.uint8)
         mov = []
         for i in range(self.get_frame_count()):
-            # frames[i, ] = self.read_next_frame(convert_to_gray_scale=convert_to_gray_scale)
             mov.append(self._video_fd.get_data(i))
         mov = np.array(mov, dtype=np.uint8)
         if convert_to_gray_scale:

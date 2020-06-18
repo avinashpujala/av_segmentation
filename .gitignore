@@ -13,6 +13,8 @@
 #media files
 *.wav
 *.mp4
+**/*.wav
+**/*.mp4
 
 
 #pyCharm
@@ -20,9 +22,11 @@
 
 # Notebook checkpoints
 .ipynb_checkpoints/*
+**/.ipynb_checkpoints/*
 
 # CSV files
 *.csv
-/data_csv/*
-data_csv/*
+**/*.csv
+/data_csv/**
+data_csv/**
 
