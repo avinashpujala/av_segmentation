@@ -119,7 +119,8 @@ def NMFD(V, parameter=None, paramConstr=None):
     # this is important to prevent initial jumps in the divergence measure
     V_tmp = V / (EPS + V.sum())
 
-    for iter in tnrange(L, desc='Processing'):
+    # for iter in tnrange(L, desc='Processing'):
+    for iter in range(L):
         # if given from the outside, apply soft constraints
         if 'funcPointerPreProcess' in paramConstr:
             tensorW, H = paramConstr['funcPointerPreProcess'](tensorW, H, iter, L, paramConstr)

@@ -112,7 +112,7 @@ def initTemplates(parameter, strategy='random'):
 
     elif strategy == 'drums':
 
-        dictW = load_matlab_dict(r'E:\Avinash\miscellaneous\project\av_segmentation\nmfTools\data/dictW.mat', 'dictW')
+        dictW = load_matlab_dict(r'/home/avi/Documents/code/projects/av_segmentation/nmfTools/data/dictW.mat', 'dictW')
 
         if parameter['numBins'] == dictW.shape[0]:
             for k in range(dictW.shape[1]):

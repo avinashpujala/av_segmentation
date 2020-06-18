@@ -1,6 +1,7 @@
 import preProcess
 import readWriteMedia
 from networks.asfv import NeuralNetwork as nn
+model = nn.__init__()
 import time
 import importlib
 import os
