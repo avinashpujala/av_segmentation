@@ -3,6 +3,7 @@ import librosa
 from cv2 import resize
 from dask import delayed, compute
 from readWriteMedia import VideoFileReader, separate_streams, rgb2gray, AudioSignal, AudioMixer
+import os
 
 
 def preprocess_audio_signal(audio_signal, vid_slice_params):
@@ -31,7 +32,8 @@ def preprocess_audio_signal(audio_signal, vid_slice_params):
         audio_signal.truncate(signal_length)
     n_fft = int(float(audio_signal.get_sample_rate()) / vid_frame_rate)
     hop_length = int(n_fft / 4)
-    mel_spectrogram, phase = signal_to_spectrogram(audio_signal, n_fft, hop_length, mel=True, db=True)
+    mel_spectrogram, phase = signal_to_spectrogram(audio_signal, n_fft, hop_length,
+                                                   mel=True, db=True)
     spectrogram_samples_per_slice = int(samples_per_slice / hop_length)
     n_slices = int(mel_spectrogram.shape[1] / spectrogram_samples_per_slice)
     slices = [
@@ -40,7 +42,8 @@ def preprocess_audio_signal(audio_signal, vid_slice_params):
     return np.stack(slices)
 
 
-def audio_video_slices_from_file(movie_path, slice_duration_ms=1000, dims=(144, 256)):
+def audio_video_slices_from_file(movie_path, slice_duration_ms=400,
+                                 dims=(144, 256), verbose: bool = False):
     """
     Given the path to a video file (video with audio track, e.g. .mp4 file), returns
     slices of the video, such that each slice is composed of as many frames as equivalent to
@@ -51,15 +54,25 @@ def audio_video_slices_from_file(movie_path, slice_duration_ms=1000, dims=(144, 
         Path to video + audio file (e.g., mp4)
     slice_duration_ms: int
         The duratio of each video slice
-    dims
-
+    dims: tuple
+        Image dimensions after resizing
+    verbose: bool
+        If True, prints path to movie file
     Returns
     -------
     aud_slices: array, (nSlices, *spectrogramDims, nSamplesPerSlice)
     vid_slices: array, (nSlices, *imgDims_resized, nSamplesPerSlice)
     """
-    print("preprocessing %s" % movie_path)
-    aud, vid = separate_streams(movie_path)
+    if verbose:
+        print("preprocessing %s" % movie_path)
+    try:
+        if os.path.exists(movie_path):
+            aud, vid = separate_streams(movie_path)
+        else:
+            return None
+    except Exception as e:
+        print(e)
+        return None
     if np.ndim(vid.imgs) == 4:
         frames = rgb2gray(vid.imgs)
     else:
@@ -104,7 +117,6 @@ def resize_preserve_aspect_ratio(imgs, dims=(144, 256)):
     height = imgs.shape[1]
     ar = round(dims[1]/dims[0], 2)
     ar_imgs = round(width/height, 2)
-    # print(f'AR = {ar_imgs}, Desired AR = {ar}')
     if ar_imgs < ar:
         width = int(width*ar/ar_imgs)
         pad = width-imgs.shape[2]
@@ -119,9 +131,8 @@ def resize_preserve_aspect_ratio(imgs, dims=(144, 256)):
         imgs_pad = np.pad(imgs, ((0, 0), (first, second), (0, 0)))
     else:
         imgs_pad = imgs
-    # print(imgs_pad.shape[1:])
-    imgs_rs = [delayed(resize)(img, (dims[1], dims[0])) for img in imgs_pad]
-    imgs_rs = np.array(compute(*imgs_rs))
+    imgs_rs_delayed = [delayed(resize)(img, (dims[1], dims[0])) for img in imgs_pad]
+    imgs_rs = np.array(compute(*imgs_rs_delayed))
     return np.squeeze(imgs_rs)
 
 
@@ -184,79 +195,110 @@ def reconstruct_speech_signal(mixed_signal, speech_spectrograms, video_frame_rat
                                                hop_length, mel=True, db=True)
 
 
-# def preprocess_audio_pair(speech_file_path, noise_file_path, slice_duration_ms,
-#                                n_video_slices, video_frame_rate):
-#     print("preprocessing pair: %s, %s" % (speech_file_path, noise_file_path))
-#     speech_signal = AudioSignal.from_wav_file(speech_file_path)
-#     noise_signal = AudioSignal.from_wav_file(noise_file_path)
-#     while noise_signal.get_number_of_samples() < speech_signal.get_number_of_samples():
-#         noise_signal = AudioSignal.concat([noise_signal, noise_signal])
-#
-#     noise_signal.truncate(speech_signal.get_number_of_samples())
-#     factor = AudioMixer.snr_factor(speech_signal, noise_signal, snr_db=0)
-#     noise_signal.amplify_by_factor(factor)
-#     mixed_signal = AudioMixer.mix([speech_signal, noise_signal], mixing_weights=[1, 1])
-#     mixed_spectrograms = preprocess_audio_signal(mixed_signal, slice_duration_ms, n_video_slices, video_frame_rate)
-#     speech_spectrograms = preprocess_audio_signal(speech_signal, slice_duration_ms, n_video_slices, video_frame_rate)
-#     noise_spectrograms = preprocess_audio_signal(noise_signal, slice_duration_ms, n_video_slices, video_frame_rate)
-#     return mixed_spectrograms, speech_spectrograms, noise_spectrograms, mixed_signal
-
-
-def preprocess_video_pair(speech_file_path, noise_file_path, slice_duration_ms=1000,
-                          mixing_weights=(1, 1), snr_db=10):
+def preprocess_video_pair(speech_file_path, noise_file_path, slice_duration_ms=400,
+                          mixing_weights=(1, 1), snr_db=0, relevant_only: bool = True,
+                          verbose: bool = False):
     """
     When given the paths to the file with sound of interest and file with noise
     returns a dictionary wtith information pertinent to training
     Parameters
     ----------
-    speech_file_path: str
+    speech_file_path: str or iterable of str
         Path to video file with sound of interest
-    noise_file_path: str
+    noise_file_path: str or iterable of str
         Path to video file with noise
     slice_duration_ms: int
         Duration of slices for training
     mixing_weights: 2-tuple or list
     snr_db: scalar
         Determines the amplification of noise. High values lead to less noise amplification
+    relevant_only: bool
+        If True, then only return variables that can be directly used for training the network, i.e.,
+        (mixed_spectrograms, video_samples, speech_spectrogram)
+    verbose: bool
+        If True, prints file paths
     Returns
     -------
-
+    out: dict
+        Key-value pairs:
+        vid_slices: array, (nSices, *imgDims, nFrames)
+            Video slices with # of frames determined by parameter slice_duration_ms
+        speech_spectrograms: array, (nSlices, nFreqBins, nTimeBins)
+            Sound spectrograms from video at file speech_file_path
+        noise_spectrograms: array, (nSlices, nFreqBins, nTimeBins)
+            Noise spectrograms from video at file noise_file_path
+        mixed_spectrograms: Mixture of speech and noise spectrograms
+        speech_signal: AudioSignal object
+            Contains speech timeseries and useful methods
+        noise_signal, mixed_signal: Self-evident
     """
-    print("preprocessing pair: %s, %s" % (speech_file_path, noise_file_path))
-    speech_dic = audio_video_slices_from_file(speech_file_path, slice_duration_ms)
-    speech_signal = speech_dic['aud_signal']
-    vid_slices = speech_dic['vid_slices']
-    noise_dic = audio_video_slices_from_file(noise_file_path, slice_duration_ms)
-    noise_signal = noise_dic['aud_signal']
-    while noise_signal.get_number_of_samples() < speech_signal.get_number_of_samples():
-        noise_signal = AudioSignal.concat([noise_signal, noise_signal])
+    if isinstance(speech_file_path, str):
+        speech_dic = audio_video_slices_from_file(speech_file_path, slice_duration_ms)
+        if speech_dic is None:
+            return None
+        speech_signal = speech_dic['aud_signal']
+        vid_slices = speech_dic['vid_slices']
+        noise_dic = audio_video_slices_from_file(noise_file_path, slice_duration_ms,
+                                                 verbose=verbose)
+        noise_signal = noise_dic['aud_signal']
+        while noise_signal.get_number_of_samples() < speech_signal.get_number_of_samples():
+            noise_signal = AudioSignal.concat([noise_signal, noise_signal])
 
-    noise_signal.truncate(speech_signal.get_number_of_samples())
-    factor = AudioMixer.snr_factor(speech_signal, noise_signal, snr_db=10)
-    noise_signal.amplify_by_factor(factor)
-    mixed_signal = AudioMixer.mix([speech_signal, noise_signal],
-                                  mixing_weights=list(mixing_weights))
-    mixed_spectrograms = preprocess_audio_signal(mixed_signal, speech_dic['vid_slice_params'])
-    speech_spectrograms = preprocess_audio_signal(speech_signal, speech_dic['vid_slice_params'])
-    noise_spectrograms = preprocess_audio_signal(noise_signal, speech_dic['vid_slice_params'])
-    out = dict(mixed_spectrograms=mixed_spectrograms,
-               speech_spectrograms=speech_spectrograms,
-               noise_spectrograms=noise_spectrograms,
-               speech_signal=speech_signal,
-               noise_signal=noise_signal,
-               mixed_signal=mixed_signal,
-               vid_slices=vid_slices)
+        noise_signal.truncate(speech_signal.get_number_of_samples())
+        factor = AudioMixer.snr_factor(speech_signal, noise_signal, snr_db=snr_db)
+        noise_signal.amplify_by_factor(factor)
+        mixed_signal = AudioMixer.mix([speech_signal, noise_signal],
+                                      mixing_weights=list(mixing_weights))
+        mixed_spectrograms = preprocess_audio_signal(mixed_signal,
+                                                     speech_dic['vid_slice_params'])
+        speech_spectrograms = preprocess_audio_signal(speech_signal,
+                                                      speech_dic['vid_slice_params'])
+        noise_spectrograms = preprocess_audio_signal(noise_signal,
+                                                     speech_dic['vid_slice_params'])
+        if relevant_only:
+            out = mixed_spectrograms, vid_slices, speech_spectrograms
+        else:
+            out = dict(mixed_spectrograms=mixed_spectrograms,
+                       speech_spectrograms=speech_spectrograms,
+                       noise_spectrograms=noise_spectrograms,
+                       speech_signal=speech_signal,
+                       noise_signal=noise_signal,
+                       mixed_signal=mixed_signal,
+                       vid_slices=vid_slices)
+    else:
+        try:
+            out = [delayed(preprocess_video_pair)(sfp, nfp, slice_duration_ms=slice_duration_ms,
+                                                  mixing_weights=mixing_weights, snr_db=snr_db)
+                   for sfp, nfp in zip(speech_file_path, noise_file_path)]
+            out = compute(*out)
+        except Exception as e:
+            print(e)
+            out = [preprocess_video_pair(sfp, nfp, slice_duration_ms=slice_duration_ms,
+                                         mixing_weights=mixing_weights, snr_db=snr_db)
+                   for sfp, nfp in zip(speech_file_path, noise_file_path)]
+        if relevant_only:
+            inds_del = [i for i in range(len(out)) if out[i] is None]
+            out = np.delete(out, inds_del, axis=0)
+            a, b, c = map(lambda x: np.concatenate(x, axis=0), zip(*[_ for _ in out]))
+            out = (a, b, c)
     return out
 
 
 class VideoNormalizer(object):
     def __init__(self, video_samples):
         # video_samples: slices x height x width x frames_per_slice
-        self.__mean_image = np.mean(video_samples, axis=(0, 3))
-        self.__std_image = np.std(video_samples, axis=(0, 3))
+        dtype = video_samples.dtype
+        self.__mean_image = np.mean(video_samples, axis=(0, 3)).astype(dtype)
+        self.__std_image = np.std(video_samples, axis=(0, 3)).astype(dtype)
 
     def normalize(self, video_samples):
-        for slc in range(video_samples.shape[0]):
-            for frame in range(video_samples.shape[3]):
-                video_samples[slc, :, :, frame] -= self.__mean_image
-                video_samples[slc, :, :, frame] /= self.__std_image
+        dtype = video_samples.dtype
+        video_samples = video_samples - \
+                        self.__mean_image[None, ..., None]
+        video_samples = \
+            video_samples/self.__std_image[None, ..., None]
+        return video_samples
+        # for slc in range(video_samples.shape[0]):
+        #     for frame in range(video_samples.shape[3]):
+        #         video_samples[slc, :, :, frame] -= self.__mean_image
+        #         video_samples[slc, :, :, frame] /= self.__std_image

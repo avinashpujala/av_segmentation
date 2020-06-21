@@ -9,5 +9,3 @@ importlib.reload(readWriteMedia)
 importlib.reload(ft)
 
 dir_ebs = r'/home/ubuntu/avinash/vol_ebs'
-
-# files_avspeech =

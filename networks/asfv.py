@@ -31,24 +31,27 @@ def audio_encoder(audio_input, batch_norm_kwargs=dict(), leaky_relu_kwargs=dict(
     -------
     nn: audio encoder network    
     """
-    bn = BatchNormalization(**batch_norm_kwargs)
-    lr = LeakyReLU(**leaky_relu_kwargs)
-    
+
     x = Convolution2D(64, kernel_size=(5, 5), strides=(2, 2), padding='same')(audio_input)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     
     x = Convolution2D(64, kernel_size=(4, 4), strides=(1, 1), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     
     x = Convolution2D(128, kernel_size=(4, 4), strides=(2, 2), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     
     x = Convolution2D(128, kernel_size=(2, 2), strides=(2, 1), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     
     x = Convolution2D(128, kernel_size=(2, 2), strides=(2, 1), padding='same')(x)
-    x = lr(bn(x))
-    
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
+
     return x
 
 
@@ -62,23 +65,26 @@ def audio_decoder(embedding, batch_norm_kwargs=dict(), leaky_relu_kwargs=dict())
     Returns
     -------
     nn: audio_decoder network
-    """    
-    bn = BatchNormalization(**batch_norm_kwargs)
-    lr = LeakyReLU(**leaky_relu_kwargs)
+    """
     x = Deconvolution2D(128, kernel_size=(2, 2), strides=(2, 1), padding='same')(embedding)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     
     x = Deconvolution2D(128, kernel_size=(2, 2), strides=(2, 1), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     
     x = Deconvolution2D(128, kernel_size=(4, 4), strides=(2, 2), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     
     x = Deconvolution2D(64, kernel_size=(4, 4), strides=(1, 1), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     
     x = Deconvolution2D(64, kernel_size=(5, 5), strides=(2, 2), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     x = Deconvolution2D(1, kernel_size=(1, 1), strides=(1, 1), padding='same')(x)
     
     return x
@@ -100,36 +106,40 @@ def video_encoder(video_input, dropout=0.3, batch_norm_kwargs=dict(),
     -------
     nn: video encoder network
     """
-    bn = BatchNormalization(**batch_norm_kwargs)
-    lr = LeakyReLU(**leaky_relu_kwargs)
-    
+
     x = Convolution2D(128, kernel_size=(5, 5), padding='same')(video_input)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(x)
     x = Dropout(dropout)(x)
     
     x = Convolution2D(128, kernel_size=(5, 5), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(x)
     x = Dropout(dropout)(x)
     
     x = Convolution2D(256, kernel_size=(3, 3), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(x)
     x = Dropout(dropout)(x)
     
     x = Convolution2D(256, kernel_size=(3, 3), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(x)
     x = Dropout(dropout)(x)
     
     x = Convolution2D(512, kernel_size=(3, 3), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(x)
     x = Dropout(dropout)(x)
     
     x = Convolution2D(512, kernel_size=(3, 3), padding='same')(x)
-    x = lr(bn(x))
+    x = BatchNormalization(**batch_norm_kwargs)(x)
+    x = LeakyReLU(**leaky_relu_kwargs)(x)
     x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(x)
     x = Dropout(dropout)(x)
     return x
@@ -194,7 +204,8 @@ class NeuralNetwork(object):
 
         combined_embedding_input = Input(shape=(combined_embedding_size, ))
         x = Dense(combined_embedding_size)(combined_embedding_input)
-        x = lr(bn(x))
+        x = BatchNormalization(**batch_norm_kwargs)(x)
+        x = LeakyReLU(**leaky_relu_kwargs)(x)
 
         aud_emedding_size = np.prod(aud_embedding_shape)
         x = Dense(aud_emedding_size)(x)
@@ -224,7 +235,8 @@ class NeuralNetwork(object):
         -------
 
         """
-        aud_spec_shape_ext = list(aud_spec_shape).append(1)  # Add channel dim
+        aud_spec_shape_ext = list(aud_spec_shape)
+        aud_spec_shape_ext.append(1)  # Add ch dimension
 
         encoder, combined_embedding_size, aud_embedding_shape = \
             cls.__build_encoder(vid_shape, aud_spec_shape_ext)
@@ -262,26 +274,26 @@ class NeuralNetwork(object):
                                        patience=10, verbose=verbose)
         tensorboard = TensorBoard(log_dir=tensorboard_dir, histogram_freq=0,
                                   write_graph=True, write_images=True)
-        batch_size = train_kwargs.get('batch_size', 16)
-        epochs = train_kwargs.get('epochs', 1000)
-        self.__model.fit(x=[train_mixed_spectrograms, train_video_samples],
+        train_kwargs['batch_size'] = train_kwargs.get('batch_size', 16)
+        train_kwargs['epochs'] = train_kwargs.get('epochs', 1000)
+        train_kwargs['verbose'] = train_kwargs.get('verbose', 1)
+        self.__model.fit(x=[train_video_samples, train_mixed_spectrograms],
                          y=train_speech_spectrograms,
-                         validation_data=([validation_mixed_spectrograms,
-                                           validation_video_samples],
+                         validation_data=([validation_video_samples,
+                                           validation_mixed_spectrograms],
                                           validation_speech_spectrograms),
-                         batch_size=batch_size, epochs=epochs,
                          callbacks=[checkpoint, lr_decay, early_stopping, tensorboard],
-                         verbose=verbose, **train_kwargs)
+                         **train_kwargs)
 
-    def predict(self, mixed_spectrograms, video_samples):
+    def predict(self, video_samples, mixed_spectrograms):
         mixed_spectrograms = np.expand_dims(mixed_spectrograms, -1)  # append channels axis
-        speech_spectrograms = self.__model.predict([mixed_spectrograms, video_samples])
+        speech_spectrograms = self.__model.predict([video_samples, mixed_spectrograms])
         return np.squeeze(speech_spectrograms)
 
     def evaluate(self, mixed_spectrograms, video_samples, speech_spectrograms):
         mixed_spectrograms = np.expand_dims(mixed_spectrograms, -1)
         speech_spectrograms = np.expand_dims(speech_spectrograms, -1)
-        loss = self.__model.evaluate(x=[mixed_spectrograms, video_samples],
+        loss = self.__model.evaluate(x=[video_samples, mixed_spectrograms],
                                      y=speech_spectrograms)
 
         return loss

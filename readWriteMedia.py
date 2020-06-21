@@ -102,7 +102,8 @@ class AudioSignal:
         new_shape = list(self._data.shape)
         new_shape[0] = new_length
         self._data = np.copy(self._data)
-        self._data.resize(new_shape)
+        foo = np.resize(self._data, new_shape)
+        self._data = foo
 
     def truncate(self, new_length):
         if self.get_number_of_samples() < new_length:
