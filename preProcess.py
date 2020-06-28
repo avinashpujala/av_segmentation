@@ -185,7 +185,8 @@ def reconstruct_signal_from_spectrogram(magnitude, phase, sample_rate, n_fft,
 def reconstruct_speech_signal(mixed_signal, speech_spectrograms, video_frame_rate):
     n_fft = int(float(mixed_signal.get_sample_rate()) / video_frame_rate)
     hop_length = int(n_fft / 4)
-    _, original_phase = signal_to_spectrogram(mixed_signal, n_fft, hop_length, mel=True, db=True)
+    _, original_phase = signal_to_spectrogram(mixed_signal, n_fft, hop_length,
+                                              mel=True, db=True)
     speech_spectrogram = np.concatenate(list(speech_spectrograms), axis=1)
     spectrogram_length = min(speech_spectrogram.shape[1], original_phase.shape[1])
     speech_spectrogram = speech_spectrogram[:, :spectrogram_length]
@@ -240,21 +241,28 @@ def preprocess_video_pair(speech_file_path, noise_file_path, slice_duration_ms=4
         vid_slices = speech_dic['vid_slices']
         noise_dic = audio_video_slices_from_file(noise_file_path, slice_duration_ms,
                                                  verbose=verbose)
+        if noise_dic is None:
+            return None
         noise_signal = noise_dic['aud_signal']
         while noise_signal.get_number_of_samples() < speech_signal.get_number_of_samples():
             noise_signal = AudioSignal.concat([noise_signal, noise_signal])
 
-        noise_signal.truncate(speech_signal.get_number_of_samples())
-        factor = AudioMixer.snr_factor(speech_signal, noise_signal, snr_db=snr_db)
-        noise_signal.amplify_by_factor(factor)
-        mixed_signal = AudioMixer.mix([speech_signal, noise_signal],
-                                      mixing_weights=list(mixing_weights))
-        mixed_spectrograms = preprocess_audio_signal(mixed_signal,
-                                                     speech_dic['vid_slice_params'])
-        speech_spectrograms = preprocess_audio_signal(speech_signal,
-                                                      speech_dic['vid_slice_params'])
-        noise_spectrograms = preprocess_audio_signal(noise_signal,
-                                                     speech_dic['vid_slice_params'])
+        try:
+            noise_signal.truncate(speech_signal.get_number_of_samples())
+            factor = AudioMixer.snr_factor(speech_signal, noise_signal, snr_db=snr_db)
+            noise_signal.amplify_by_factor(factor)
+            mixed_signal = AudioMixer.mix([speech_signal, noise_signal],
+                                          mixing_weights=list(mixing_weights))
+            mixed_spectrograms = preprocess_audio_signal(mixed_signal,
+                                                         speech_dic['vid_slice_params'])
+            speech_spectrograms = preprocess_audio_signal(speech_signal,
+                                                          speech_dic['vid_slice_params'])
+            noise_spectrograms = preprocess_audio_signal(noise_signal,
+                                                         speech_dic['vid_slice_params'])
+        except Exception as e:
+            print(e)
+            return None
+
         if relevant_only:
             out = mixed_spectrograms, vid_slices, speech_spectrograms
         else:
@@ -268,37 +276,37 @@ def preprocess_video_pair(speech_file_path, noise_file_path, slice_duration_ms=4
     else:
         try:
             out = [delayed(preprocess_video_pair)(sfp, nfp, slice_duration_ms=slice_duration_ms,
-                                                  mixing_weights=mixing_weights, snr_db=snr_db)
+                                                  mixing_weights=mixing_weights,
+                                                  snr_db=snr_db, verbose=verbose)
                    for sfp, nfp in zip(speech_file_path, noise_file_path)]
             out = compute(*out)
         except Exception as e:
             print(e)
             out = [preprocess_video_pair(sfp, nfp, slice_duration_ms=slice_duration_ms,
-                                         mixing_weights=mixing_weights, snr_db=snr_db)
+                                         mixing_weights=mixing_weights, snr_db=snr_db,
+                                         verbose=verbose)
                    for sfp, nfp in zip(speech_file_path, noise_file_path)]
         if relevant_only:
             inds_del = [i for i in range(len(out)) if out[i] is None]
             out = np.delete(out, inds_del, axis=0)
-            a, b, c = map(lambda x: np.concatenate(x, axis=0), zip(*[_ for _ in out]))
-            out = (a, b, c)
+            if len(out)>0:
+                a, b, c = map(lambda x: np.concatenate(x, axis=0), zip(*[_ for _ in out]))
+                out = (a, b, c)
+            else:
+                out = None
     return out
 
 
 class VideoNormalizer(object):
     def __init__(self, video_samples):
         # video_samples: slices x height x width x frames_per_slice
-        dtype = video_samples.dtype
-        self.__mean_image = np.mean(video_samples, axis=(0, 3)).astype(dtype)
-        self.__std_image = np.std(video_samples, axis=(0, 3)).astype(dtype)
+        self.__mean_image = np.mean(video_samples, axis=(0, 3)).astype(np.float32)
+        self.__std_image = np.std(video_samples, axis=(0, 3)).astype(np.float32)
 
     def normalize(self, video_samples):
-        dtype = video_samples.dtype
-        video_samples = video_samples - \
-                        self.__mean_image[None, ..., None]
-        video_samples = \
-            video_samples/self.__std_image[None, ..., None]
-        return video_samples
-        # for slc in range(video_samples.shape[0]):
-        #     for frame in range(video_samples.shape[3]):
-        #         video_samples[slc, :, :, frame] -= self.__mean_image
-        #         video_samples[slc, :, :, frame] /= self.__std_image
+        video_samples = video_samples.astype(np.float32)
+        for slc in range(video_samples.shape[0]):
+            for frame in range(video_samples.shape[3]):
+                video_samples[slc, :, :, frame] -= self.__mean_image
+                video_samples[slc, :, :, frame] /= self.__std_image
+

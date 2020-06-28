@@ -301,7 +301,6 @@ class NeuralNetwork(object):
     @staticmethod
     def load(model_cache_path):
         model = load_model(model_cache_path)
-
         return NeuralNetwork(model)
 
     def save(self, model_cache_path):

@@ -17,6 +17,7 @@ def get_file_paths(sound_dir, noise_dir=None, n_files=None, ext='mp4'):
     sound_paths = glob.glob(join(sound_dir, f'*.{ext}'))
     if n_files is None:
         n_files = len(sound_paths)
+    print(f'{n_files} file paths')
     noise_paths = glob.glob(join(noise_dir, f'*.{ext}'))
     noise_paths = np.union1d(noise_paths, sound_paths)
     np.random.shuffle(noise_paths)
@@ -25,7 +26,7 @@ def get_file_paths(sound_dir, noise_dir=None, n_files=None, ext='mp4'):
     return sound_paths[:n_files], noise_paths[:n_files]
 
 
-def train(sound_dir, noise_dir=None, n_files=None, val_split=0.15, ext='mp4',
+def train(sound_dir, noise_dir=None, neural_network=None, n_files=None, val_split=0.15, ext='mp4',
           **train_kwargs):
     """
     Train model using a simpler pipeline that is mostly automated for the user.
@@ -43,6 +44,9 @@ def train(sound_dir, noise_dir=None, n_files=None, val_split=0.15, ext='mp4',
         Number of video files to read from. If None, reads all files in sound_dir. This
         number exists to restrict training to a smaller random subset because of memory
         constraints
+    neural_network: None, str, or asfv.NeuralNework class
+        If None, then creates a new model. If str then path to saved model, else
+        asssumes that the loaded model itself has been given as input.
     val_split: scalar
         Fraction of samples to use for validation
     ext: str
@@ -59,15 +63,21 @@ def train(sound_dir, noise_dir=None, n_files=None, val_split=0.15, ext='mp4',
                                               noise_dir=noise_dir,
                                               n_files=n_files, ext=ext)
     dir_store = util.apply_recursively(lambda p: split(p)[0], sound_paths[0])
-    dir_store = join(dir_store, f'storage_{util.timestamp("hour")}')
+    dir_store = join(dir_store, f'storage_{util.timestamp("day")}')
     if not path_exists(dir_store):
         mkdir(dir_store)
-    dir_tensorboard = join(dir_store, 'tensorboard')
+    dir_tensorboard = join(dir_store, 'tensorboard_logdir')
     path_model = join(dir_store, 'trained_model.h5')
 
     print('Extracting data from paths...')
+    out = preProcess.preprocess_video_pair(sound_paths, noise_paths, verbose=True)
+    inds_del = [i for i in range(len(out)) if out[i] is None]
+    if len(inds_del) > 0:
+        print(f'Could not read {inds_del} files!')
     mixed_spectrograms, vid_samples, sound_spectrograms = \
-        preProcess.preprocess_video_pair(sound_paths, noise_paths)
+        map(lambda x: np.delete(x, inds_del, axis=0), out)
+    mixed_spectrograms, vid_samples, sound_spectrograms = \
+        map(np.array, (mixed_spectrograms, vid_samples, sound_spectrograms))
     n_samples = mixed_spectrograms.shape[0]
     inds_all = np.arange(n_samples)
     np.random.shuffle(inds_all)
@@ -93,9 +103,15 @@ def train(sound_dir, noise_dir=None, n_files=None, val_split=0.15, ext='mp4',
         pickle.dump(vid_normalizer, norm_file)
 
     print('Creating model...')
-    neural_network = \
-        asfv.NeuralNetwork.build(vid_samples_train.shape[1:],
-                                 mixed_spectrograms_train.shape[1:])
+    if neural_network is None:
+        neural_network = \
+            asfv.NeuralNetwork.build(vid_samples_train.shape[1:],
+                                     mixed_spectrograms_train.shape[1:])
+    elif isinstance(neural_network, str):
+        if not path_exists(neural_network):
+            print('Check path, neural network not found!')
+        else:
+            neural_network = asfv.NeuralNetwork.load(neural_network)
 
     print('Training model...')
     train_kwargs['verbose'] = train_kwargs.get('verbose', 1)
@@ -111,6 +127,8 @@ def train(sound_dir, noise_dir=None, n_files=None, val_split=0.15, ext='mp4',
     return path_model
 
 
-
-
+def load_vid_norm(path):
+    with open(path, mode='rb') as vid_file:
+        vid_norm = pickle.load(vid_file)
+    return vid_norm
 
