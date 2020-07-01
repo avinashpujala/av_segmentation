@@ -1,9 +1,15 @@
 import numpy as np
 import librosa
 from cv2 import resize
-from dask import delayed, compute
-from readWriteMedia import VideoFileReader, separate_streams, rgb2gray, AudioSignal, AudioMixer
 import os
+import glob
+import pickle
+import h5py
+from dask import delayed, compute
+
+from readWriteMedia import VideoFileReader, separate_streams, rgb2gray, AudioSignal, AudioMixer
+from util import util
+from util import fileTools as ft
 
 
 def preprocess_audio_signal(audio_signal, vid_slice_params):
@@ -97,6 +103,22 @@ def audio_video_slices_from_file(movie_path, slice_duration_ms=400,
                aud_signal=aud_signal, aud_slices=aud_slices)
 
     return out
+
+
+def get_file_paths(sound_dir, noise_dir=None, n_files=None, ext='mp4'):
+    if noise_dir is None:
+        noise_dir = sound_dir
+    ext = ext.split('.')[-1]
+    sound_paths = glob.glob(os.path.join(sound_dir, f'*.{ext}'))
+    if n_files is None:
+        n_files = len(sound_paths)
+    print(f'{n_files} file paths')
+    noise_paths = glob.glob(os.path.join(noise_dir, f'*.{ext}'))
+    noise_paths = np.union1d(noise_paths, sound_paths)
+    np.random.shuffle(noise_paths)
+    np.random.shuffle(sound_paths)
+    noise_paths = noise_paths[:len(sound_paths)]
+    return sound_paths[:n_files], noise_paths[:n_files]
 
 
 def resize_preserve_aspect_ratio(imgs, dims=(144, 256)):
@@ -295,6 +317,67 @@ def preprocess_video_pair(speech_file_path, noise_file_path, slice_duration_ms=4
             else:
                 out = None
     return out
+
+
+def store_in_hdf(sound_dir, noise_dir=None, val_split=0.2, n_files=30000,
+                 block_size=500, ext='mp4'):
+    sound_paths, noise_paths = get_file_paths(sound_dir, noise_dir=noise_dir,
+                                              n_files=n_files, ext=ext)
+    sound_paths_sub = ft.sublists_from_list(sound_paths, block_size)
+    noise_paths_sub = ft.sublists_from_list(noise_paths, block_size)
+    dir_store = util.apply_recursively(lambda p: os.path.split(p)[0], sound_paths[0])
+    dir_store = os.path.join(dir_store, f'storage_{util.timestamp("day")}')
+    if not os.path.exists(dir_store):
+        os.makedirs(dir_store, exist_ok=True)
+    path_hFile = os.path.join(dir_store, f'stored_data_{util.timestamp("day")}.h5')
+    nBlocks = len(sound_paths_sub)
+    iBlock = 0
+    for sound_paths_, noise_paths_ in zip(sound_paths_sub, noise_paths_sub):
+        print(f'Block {iBlock+1}/{len(sound_paths_sub)}')
+        iBlock += 1
+        out = preprocess_video_pair(sound_paths_, noise_paths_, verbose=True)
+        inds_del = [i for i in range(len(out)) if out[i] is None]
+        if len(inds_del) > 0:
+            print(f'Could not read {inds_del} files!')
+        mixed_spectrograms, vid_samples, sound_spectrograms = \
+            map(lambda x: np.delete(x, inds_del, axis=0), out)
+        mixed_spectrograms, vid_samples, sound_spectrograms = \
+            map(np.array, (mixed_spectrograms, vid_samples, sound_spectrograms))
+        n_samples = mixed_spectrograms.shape[0]
+        inds_all = np.arange(n_samples)
+        np.random.shuffle(inds_all)
+        n_samples_val = int(n_samples * val_split)
+        inds_val = inds_all[:n_samples_val]
+        inds_train = inds_all[n_samples_val:]
+        print(f'{len(inds_val)}/{len(inds_all)} validation samples')
+        mixed_spectrograms_train, vid_samples_train, sound_spectrograms_train = \
+            mixed_spectrograms[inds_train], vid_samples[inds_train], \
+            sound_spectrograms[inds_train]
+        mixed_spectrograms_val, vid_samples_val, sound_spectrograms_val = \
+            mixed_spectrograms[inds_val], vid_samples[inds_val], \
+            sound_spectrograms[inds_val]
+
+        print('Normalizing videos..')
+        vid_normalizer = VideoNormalizer(vid_samples_train)
+        vid_normalizer.normalize(vid_samples_train)
+        vid_normalizer.normalize(vid_samples_val)
+
+        keyNames = ('mixed_spectrograms_train', 'vid_samples_train',
+                    'sound_spectrograms_train', 'mixed_spectrograms_val',
+                    'vid_samples_val', 'sound_spectrograms_val')
+        with h5py.File(path_hFile, mode='a') as hFile:
+            if iBlock == 0:
+                for key in keyNames:
+                    if key in hFile:
+                        del hFile[key]
+            else:
+                for key in keyNames:
+                    hFile = ft.createOrAppendToHdf(hFile, key, eval(key), verbose=True)
+        # print('Saving normalizer...')
+        # path_normalizer = os.path.join(dir_store, 'normalizer.pkl')
+        # with open(path_normalizer, mode='wb') as norm_file:
+        #     pickle.dump(vid_normalizer, norm_file)
+    return path_hFile
 
 
 class VideoNormalizer(object):

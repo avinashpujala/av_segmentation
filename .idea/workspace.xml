@@ -26,13 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4946cd1-24d0-4c91-b497-0aeb52a6db10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/av_segmentation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/av_segmentation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_app.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/networks/asfv.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/asfv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preProcess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seeSound.py" beforeDir="false" afterPath="$PROJECT_DIR$/seeSound.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/fileTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/fileTools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,20 +97,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="asfv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="fileTools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/networks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/networks/asfv.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/fileTools.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,9 +120,6 @@
       <module name="av_segmentation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -133,28 +127,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preProcess.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="readWriteMedia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="av_segmentation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/readWriteMedia.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -204,20 +176,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="util" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="av_segmentation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.preProcess" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.fileTools" />
+      <item itemvalue="Python.util" />
       <item itemvalue="Python.seeSound" />
-      <item itemvalue="Python.readWriteMedia" />
-      <item itemvalue="Python.asfv" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.seeSound" />
-        <item itemvalue="Python.asfv" />
-        <item itemvalue="Python.preProcess" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.readWriteMedia" />
+        <item itemvalue="Python.preProcess" />
+        <item itemvalue="Python.util" />
+        <item itemvalue="Python.fileTools" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +224,7 @@
       <updated>1592460461947</updated>
       <workItem from="1592460463823" duration="5519000" />
       <workItem from="1592469187400" duration="139079000" />
-      <workItem from="1593300694394" duration="2378000" />
+      <workItem from="1593300694394" duration="41565000" />
     </task>
     <servers />
   </component>
@@ -289,38 +280,38 @@
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state x="581" y="146" width="424" height="496" key="FileChooserDialogImpl/72.27.1464.837@72.27.1464.837" timestamp="1592892591966" />
-    <state width="1418" height="253" key="GridCell.Tab.0.bottom" timestamp="1592894923487">
+    <state width="1418" height="253" key="GridCell.Tab.0.bottom" timestamp="1593417602483">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1418" height="253" key="GridCell.Tab.0.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592894923487" />
-    <state width="1418" height="253" key="GridCell.Tab.0.center" timestamp="1592894923483">
+    <state width="1418" height="253" key="GridCell.Tab.0.bottom/72.27.1464.837@72.27.1464.837" timestamp="1593417602483" />
+    <state width="1418" height="253" key="GridCell.Tab.0.center" timestamp="1593417602482">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1418" height="253" key="GridCell.Tab.0.center/72.27.1464.837@72.27.1464.837" timestamp="1592894923483" />
-    <state width="1418" height="253" key="GridCell.Tab.0.left" timestamp="1592894923481">
+    <state width="1418" height="253" key="GridCell.Tab.0.center/72.27.1464.837@72.27.1464.837" timestamp="1593417602482" />
+    <state width="1418" height="253" key="GridCell.Tab.0.left" timestamp="1593417602481">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1418" height="253" key="GridCell.Tab.0.left/72.27.1464.837@72.27.1464.837" timestamp="1592894923481" />
-    <state width="1418" height="253" key="GridCell.Tab.0.right" timestamp="1592894923485">
+    <state width="1418" height="253" key="GridCell.Tab.0.left/72.27.1464.837@72.27.1464.837" timestamp="1593417602481" />
+    <state width="1418" height="253" key="GridCell.Tab.0.right" timestamp="1593417602483">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1418" height="253" key="GridCell.Tab.0.right/72.27.1464.837@72.27.1464.837" timestamp="1592894923485" />
-    <state width="1418" height="253" key="GridCell.Tab.1.bottom" timestamp="1592894923494">
+    <state width="1418" height="253" key="GridCell.Tab.0.right/72.27.1464.837@72.27.1464.837" timestamp="1593417602483" />
+    <state width="1418" height="253" key="GridCell.Tab.1.bottom" timestamp="1593417602488">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1418" height="253" key="GridCell.Tab.1.bottom/72.27.1464.837@72.27.1464.837" timestamp="1592894923494" />
-    <state width="1418" height="253" key="GridCell.Tab.1.center" timestamp="1592894923490">
+    <state width="1418" height="253" key="GridCell.Tab.1.bottom/72.27.1464.837@72.27.1464.837" timestamp="1593417602488" />
+    <state width="1418" height="253" key="GridCell.Tab.1.center" timestamp="1593417602483">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1418" height="253" key="GridCell.Tab.1.center/72.27.1464.837@72.27.1464.837" timestamp="1592894923490" />
-    <state width="1418" height="253" key="GridCell.Tab.1.left" timestamp="1592894923488">
+    <state width="1418" height="253" key="GridCell.Tab.1.center/72.27.1464.837@72.27.1464.837" timestamp="1593417602483" />
+    <state width="1418" height="253" key="GridCell.Tab.1.left" timestamp="1593417602483">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1418" height="253" key="GridCell.Tab.1.left/72.27.1464.837@72.27.1464.837" timestamp="1592894923488" />
-    <state width="1418" height="253" key="GridCell.Tab.1.right" timestamp="1592894923492">
+    <state width="1418" height="253" key="GridCell.Tab.1.left/72.27.1464.837@72.27.1464.837" timestamp="1593417602483" />
+    <state width="1418" height="253" key="GridCell.Tab.1.right" timestamp="1593417602485">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state width="1418" height="253" key="GridCell.Tab.1.right/72.27.1464.837@72.27.1464.837" timestamp="1592894923492" />
+    <state width="1418" height="253" key="GridCell.Tab.1.right/72.27.1464.837@72.27.1464.837" timestamp="1593417602485" />
     <state x="105" y="22" width="1248" height="742" key="SettingsEditor" timestamp="1592892602488">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
@@ -341,13 +332,13 @@
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state x="696" y="93" width="379" height="585" key="ftp.server.browser/72.27.1464.837@72.27.1464.837" timestamp="1592888783603" />
-    <state x="467" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1592808170400">
+    <state x="467" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1593366584471">
       <screen x="72" y="27" width="1464" height="837" />
     </state>
-    <state x="467" y="185" width="672" height="678" key="search.everywhere.popup/72.27.1464.837@72.27.1464.837" timestamp="1592808170400" />
+    <state x="467" y="185" width="672" height="678" key="search.everywhere.popup/72.27.1464.837@72.27.1464.837" timestamp="1593366584471" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/av_segmentation$test.coverage" NAME="test Coverage Results" MODIFIED="1592894601470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/av_segmentation$test.coverage" NAME="test Coverage Results" MODIFIED="1593417123331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/av_segmentation$test_2020_06_11_voiceDrumSep.coverage" NAME="test_2020-06-11_voiceDrumSep Coverage Results" MODIFIED="1592473135231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

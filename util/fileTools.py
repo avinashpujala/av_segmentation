@@ -9,6 +9,39 @@ import numpy as np
 import glob
 
 
+def createOrAppendToHdf(hFile, keyName, arr, verbose: bool = False):
+    """
+    Create a dataset (can be within in group) within a given HDF file
+    if the dataset with specified name doesn't exist else append to the
+    existing dataset
+    Parameters
+    ----------
+    hFile: HDF file object
+        HDF file object to create or append dataset in.
+    keyName: str
+        Path to the dataset in the HDF file. For e.g., 'foo' or 'foo/bar'.
+    arr: array
+        Array to write to the dataset.
+    verbose: bool
+        If True, prints name of the dataset key
+    Returns
+    -------
+    hFile: HDF file object
+        HDF file object with dataset.
+    """
+    if keyName not in hFile:
+        if verbose:
+            print(f'Creating {keyName} in hdf file')
+        hFile.create_dataset(keyName, data=arr, maxshape=(None, *arr.shape[1:]),
+                             compression='lzf')
+    else:
+        if verbose:
+            print(f'Appending to {keyName} in h5 file')
+        hFile[keyName].resize((hFile[keyName].shape[0] + arr.shape[0]), axis=0)
+        hFile[keyName][-arr.shape[0]:] = arr
+    return hFile
+
+
 def get_files(fileDir, pattern=None):
     """
     Returns file names in specified directory, filtered by pattern
@@ -28,6 +61,35 @@ def get_files(fileDir, pattern=None):
     else:
         fileNames = glob.fnmatch.filter(os.listdir(fileDir), pattern)
         return fileNames
+
+
+def sublists_from_list(input_list, chunk_size):
+    """
+    Given a list, chunks it into sizes specified and returns the chunks as items
+    in a new list
+    Parameters
+    ----------
+    input_list: list
+        Original list
+    chunk_size: int
+        Size of sublists
+    Returns
+    -------
+    sub_lists: list
+        Sublists
+    """
+
+    subList, supList = [], []
+    for itemNum, item in enumerate(input_list):
+        if np.mod(itemNum+1, chunk_size) == 0:
+            subList.append(item)
+            supList.append(subList)
+            subList = []
+        else:
+            subList.append(item)
+    supList.append(subList)
+    supList = list(filter(lambda x: len(x) != 0, supList))  # Remove zero-length lists
+    return supList
 
 
 def subDirs_in_dir(inDir):
@@ -53,62 +115,3 @@ def recursively_find_paths_with_searchStr(searchDir, searchStr):
     roots, dirs, files = zip(*[out for out in os.walk(searchDir)])
     roots = glob.fnmatch.filter(f'*{searchStr}*.*', roots)
     return np.array(roots)
-#
-#
-# def distribute_files_into_subs(fileDir, n_sub: int = 4, div=750, ext='bmp',
-#                           subPrefix='sub'):
-#     """ Split files in a directory into 'n_sub' subdirectories within that
-#     directory such that the # of files in each subdirectory is divisible by
-#     'div'. If the total # of files does not evenly divide into 'div', the does
-#     not move the remainder of the files into a subdirectory.
-#     Parameters
-#     ----------
-#     fileDir: str
-#         Path to the directory of files to be moved
-#     n_sub: int
-#         Number of subdirectories into which the files are to be moved
-#     div: int or None
-#         The # of files in each subfolder wil be divisible by this number
-#     ext: str
-#         File extension filter
-#     subPrefix: str
-#         Name prefix of the created subdirectories
-#     Returns
-#     -------
-#     subDirs: List-like
-#         Subdirectory paths
-#     """
-#     import dask
-#     if div is None:
-#         div = 1
-#     filePaths = glob.glob(os.path.join(fileDir, f'*.{ext}'))
-#     filePaths = np.array(filePaths)
-#     N = len(filePaths)
-#     N_div = (N//div)*div
-#     inds = np.arange(N_div)
-#     subList = sublistsFromList(inds, div)
-#     chunkSize = len(subList)//n_sub
-#     supList = sublistsFromList(np.arange(len(subList)), chunkSize)
-#     if len(supList)>n_sub:
-#         supList[-2].extend(supList[-1])
-#         supList.pop(-1)
-#     inds_sup = []
-#     for sl in supList:
-#         sub_now = np.array(subList)[sl]
-#         inds_=[]
-#         for sn in sub_now:
-#             inds_.extend(sn)
-#         inds_sup.append(inds_)
-#
-#     subDirs = []
-#     for iSub, inds_ in enumerate(inds_sup):
-#         sn = f'{subPrefix}_{iSub+1}'
-#         dst = os.path.join(fileDir, sn)
-#         os.makedirs(dst, exist_ok=True)
-#         subDirs.append(dst)
-#         print(f'Moving into {sn}, {iSub+1}/{len(inds_sup)}')
-#         foo = [dask.delayed(sh.move)(fp, dst) for fp in filePaths[inds_]]
-#         dask.compute(*foo)
-#     return subDirs
-#
-#

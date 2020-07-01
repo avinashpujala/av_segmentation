@@ -96,7 +96,8 @@ def video_encoder(video_input, dropout=0.3, batch_norm_kwargs=dict(),
     Encoder for embedding video input
     Parameters
     ----------
-    video_input: array
+    video_input: keras input layer
+        keras.layers.Input(input_shape=vid_shape), where vid_shape = (*nImgsDims, nFramesInBatch)
     batch_norm_kwargs, leaky_relu_kwargs: see audio_encoder
     dropout: scalar
         Unit dropout rate for each layer. Typically, higher
@@ -156,10 +157,10 @@ class NeuralNetwork(object):
 
         Parameters
         ----------
-        vid_shape: tuple
-            Shape of video input
-        aud_spec_shape_ext: tuple
-            Shape of extended audio spectrogram input.
+        vid_shape: tuple, (3,)
+            Shape of video input: (*imgDims, nFramesInSingleBatch)
+        aud_spec_shape_ext: tuple, (3, )
+            Shape of extended audio spectrogram input: (nFreqBins, nTimeBins, 1). Here nFreqBins = 80
             If audio spectrogram shape = (nTimePts, nFreqScales, timeWinSize), then extended audio
             spectrogram shape = (nTimePts, nFreqScales, timeWinSize, 1), i.e. channel dimension added
         batch_norm_kwargs: dict
@@ -223,8 +224,10 @@ class NeuralNetwork(object):
 
         Parameters
         ----------
-        vid_shape
-        aud_spec_shape
+        vid_shape: tuple, (3,)
+            (*imgDims, nFrames), where nFrames = # of image frames in specified duration
+        aud_spec_shape: tuple, (2, )
+            (nFreqBins, nTimeBins)
         optimizer: str
             Name of optimizer to use, e.g. 'adam' or 'rmsprop'. At present, did not test beyond
             these two optimizers, so proceed with caution, if using other optimizer.
@@ -233,7 +236,8 @@ class NeuralNetwork(object):
 
         Returns
         -------
-
+        neural_network: keras model
+            Neural network that is ready to go (training or prediction)
         """
         aud_spec_shape_ext = list(aud_spec_shape)
         aud_spec_shape_ext.append(1)  # Add ch dimension
