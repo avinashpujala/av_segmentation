@@ -1,5 +1,20 @@
 # av_segmentation
-Audio segmentation in videos using visual information from regions of interest. 
+## Audio segmentation in videos using visual information from regions of interest.
+This repo contains code for isolating sounds from sources of interest (e.g. human speaker, musical instrument) in videos. The sound sources are specified by drawing regions-of-interest (ROIs) on the first frame of the video. A trained neural network utilizes the combination of visual and audio information to extract sounds from objects within the ROIs. At core, the underlying design of the neural network is inspired by
+```
+@inproceedings{gabbay2018visual,
+author  	= {Aviv Gabbay and
+	  	   Asaph Shamir and
+		   Shmuel Peleg},
+title     	= {Visual Speech Enhancement},
+booktitle 	= {Interspeech},
+pages     	= {1170--1174},
+publisher 	= {{ISCA}},
+year      	= {2018}
+}
+```	
+
+The code also allows the user to download videos from online sources, upload videos from local stores, draw ROIs, and train the network on new video data. Libraries for extracting images and audio signals from videos, for mixing sound sources to produce new training data, for converting audio timeseries to Short-Time Fourier Transform (STFT) representations are included.
 
 Contains scripts for downloading AVSpeech dataset, 720p/360p videos with 25fps and audio at 44.1kHz. 
 This part of the code has been adapted from Nabarun Goswami's code at

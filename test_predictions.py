@@ -4,6 +4,7 @@ import time
 import glob
 import h5py
 import numpy as np
+import dask.array as da
 
 import preProcess
 import seeSound
@@ -15,43 +16,67 @@ importlib.reload(preProcess)
 importlib.reload(seeSound)
 
 dir_ebs = r'/home/ubuntu/avinash/vol_ebs'
+dir_hFile = '/home/ubuntu/avinash/vol_ebs/avspeech/storage_20200628'
+dir_model = dir_hFile
+
 sound_dir = os.path.join(dir_ebs, 'avspeech/train')
 noise_dir = os.path.join(dir_ebs, 'audioset/videos')
 dir_temp = os.path.join(dir_ebs, 'temp')
 
-#%% Storing to hd5 file
-# path_hFile = preProcess.store_in_hdf(sound_dir, noise_dir=noise_dir, n_files=30000,
-#                                      block_size=100)
+
+#%% Path to hdf file
+
+path_hFile = glob.glob(dir_hFile + '/stored*.h5')
+if len(path_hFile) == 0:
+    print('No hdf file found!')
+else:
+    path_hFile = path_hFile[-1]
+
+#%% Reading from hFile and creating Video Normalizer
+
+with h5py.File(path_hFile, mode='r') as hFile:
+    print(hFile.keys())
+    print(hFile['vid_samples_train'].shape)
+    tic = time.time()
+    arr = da.from_array(hFile['vid_samples_train'])
+    img_mean = arr.mean(axis=0).mean(axis=-1).compute()
+    img_std = arr.std(axis=0).mean(axis=-1).compute()
+    vid_norm = preProcess.VideoNormalizer(hFile['vid_samples_train'][:5])
+    vid_norm._VideoNormalizer__mean_image = img_mean
+    vid_norm._VideoNormalizer__std_image = img_std
+    print(int(time.time() - tic), 's')
+
+#%% Save vid_norm
+path_vid_norm = os.path.join(dir_hFile, 'vid_norm.pkl')
+vid_norm.save(path_vid_norm)
+
 
 #%% If pre-trained model already exists load from path
 tic = time.time()
-path_model = '/home/ubuntu/avinash/vol_ebs/avspeech/storage_20200628/trained_model.h5'
-neural_network = asfv.NeuralNetwork.load(path_model)
+path_model = glob.glob(dir_model + '/trained_model.h5')
+if len(path_model) == 0:
+    print('Model not found')
+else:
+    path_model = path_model[-1]
+    neural_network = asfv.NeuralNetwork.load(path_model)
 print(int(time.time() - tic), 's')
 
-#%%
-# sound_paths, noise_paths = seeSound.get_file_paths(dir_speech, noise_dir=None)
-# tic = time.time()
-# print('Processing..')
-# path_model = seeSound.train(sound_dir, noise_dir=noise_dir, n_files=20,
-#                             neural_network=None)
-# print(int(time.time()-tic), 's')
-
-#%% Load model
-net = asfv.load_model(path_model)
-my_net = asfv.NeuralNetwork.load(path_model)
-path_vid_norm = os.path.split(path_model)[0]
-path_vid_norm = glob.glob(path_vid_norm + '/*.pkl')[-1]
+#%% Load VideoNormalizer
+path_vid_norm = os.path.join(dir_hFile, 'vid_norm.pkl')
 vid_norm = seeSound.load_vid_norm(path_vid_norm)
 
 #%% Assess predictions
-ind = 7
-# sound_paths, noise_paths = seeSound.get_file_paths(sound_dir, noise_dir=noise_dir,
-#                                                    n_files=100)
-# out = preProcess.preprocess_video_pair(sound_paths[ind], noise_paths[ind],
-#                                        relevant_only=False)
-vid_norm.normalize(out['vid_slices'])
-predicted_spectrogram = my_net.predict(out['vid_slices'], out['mixed_spectrograms'])
+offset = 0
+nSlices = 5
+inds = range(offset, offset+nSlices+1)
+with h5py.File(path_hFile, mode='r') as hFile:
+    print(hFile.keys())
+    spec_mixed = np.array(hFile['mixed_spectrograms_train'][inds])
+    spec_pure = np.array(hFile['sound_spectrograms_train'][inds])
+    vid_slices = np.array(hFile['vid_samples_train'][inds])
+vid_slices = vid_norm.normalize(vid_slices)
+
+predicted_spectrogram = neural_network.predict(vid_slices, spec_mixed)
 
 predicted_signal = preProcess.reconstruct_speech_signal(out['mixed_signal'],
                                                         predicted_spectrogram, 25)

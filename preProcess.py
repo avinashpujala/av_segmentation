@@ -393,3 +393,9 @@ class VideoNormalizer(object):
                 video_samples[slc, :, :, frame] -= self.__mean_image
                 video_samples[slc, :, :, frame] /= self.__std_image
 
+    def save(self, path):
+        with open(path, mode='wb') as vid_file:
+            pickle.dump(self, vid_file)
+        print(f'Saved at \n{path}')
+
+

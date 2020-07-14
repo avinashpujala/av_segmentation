@@ -221,11 +221,9 @@ def train_from_hdf(path_hFile, neural_network=None, n_samples_per_block=1000,
     return path_model
 
 
-
-
-
 def load_vid_norm(path):
     with open(path, mode='rb') as vid_file:
         vid_norm = pickle.load(vid_file)
     return vid_norm
+
 
