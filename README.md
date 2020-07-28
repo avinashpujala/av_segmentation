@@ -16,7 +16,7 @@ year      	= {2018}
 
 The code also allows the user to download videos from online sources, upload videos from local stores, draw ROIs, and train the network on new video data. Libraries for extracting images and audio signals from videos, for mixing sound sources to produce new training data, for converting audio timeseries to Short-Time Fourier Transform (STFT) representations are included.
 
-Contains scripts for downloading AVSpeech dataset, 720p/360p videos with 25fps and audio at 44.1kHz. 
+Contains scripts for downloading AVSpeech dataset,720p/360p videos with 25fps and audio at 44.1kHz, as well other datsets (e.g. Audioset) 
 This part of the code has been adapted from Nabarun Goswami's code at
 https://github.com/naba89/AVSpeechDownloader
 
@@ -38,4 +38,6 @@ conda activate av_segmentation
 NB: When installing ```librosa >=0.5.1``` make sure that ```numba``` version is compatible.
 ```pip install numba==0.48```
 
+The complete pipeline from data preprocessing, builing the neural network, training, and running inference can now be done through subroutines available in 
+``` seeSound.py```
 
