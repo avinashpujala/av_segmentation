@@ -26,12 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4946cd1-24d0-4c91-b497-0aeb52a6db10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_predictions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seeSound.py" beforeDir="false" afterPath="$PROJECT_DIR$/seeSound.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_data_for_training.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,11 +208,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.preProcess" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.fileTools" />
-      <item itemvalue="Python.util" />
+      <item itemvalue="Python.preProcess" />
       <item itemvalue="Python.seeSound" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.util" />
     </list>
     <recent_temporary>
       <list>
@@ -243,7 +239,11 @@
       <workItem from="1593300694394" duration="42373000" />
       <workItem from="1593737475088" duration="1570000" />
       <workItem from="1594458188226" duration="14206000" />
-      <workItem from="1594687653175" duration="3173000" />
+      <workItem from="1594687653175" duration="5539000" />
+      <workItem from="1595574267962" duration="14000" />
+      <workItem from="1595574301033" duration="679000" />
+      <workItem from="1595575004879" duration="627000" />
+      <workItem from="1595829424993" duration="2518000" />
     </task>
     <servers />
   </component>
@@ -275,10 +275,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="292" y="51" width="887" height="689" key="#Deployment" timestamp="1593737581540">
+    <state x="232" y="31" width="899" height="689" key="#Deployment" timestamp="1595920920757">
       <screen x="72" y="27" width="1208" height="693" />
     </state>
-    <state x="292" y="51" key="#Deployment/72.27.1208.693@72.27.1208.693" timestamp="1593737581540" />
+    <state x="232" y="31" width="899" height="689" key="#Deployment/72.27.1208.693@72.27.1208.693" timestamp="1595920920757" />
     <state x="393" y="46" width="887" height="689" key="#Deployment/72.27.1464.837@72.27.1464.837" timestamp="1592891946208" />
     <state x="668" y="293" width="679" height="445" key="#Notifications" timestamp="1592460485120">
       <screen x="72" y="27" width="1464" height="837" />
@@ -296,9 +296,10 @@
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state x="172" y="117" width="1264" height="642" key="DirDiffDialog/72.27.1464.837@72.27.1464.837" timestamp="1592570885934" />
-    <state x="581" y="146" width="424" height="496" key="FileChooserDialogImpl" timestamp="1592892591966">
-      <screen x="72" y="27" width="1464" height="837" />
+    <state x="492" y="106" width="376" height="411" key="FileChooserDialogImpl" timestamp="1595575031372">
+      <screen x="72" y="27" width="1208" height="693" />
     </state>
+    <state x="492" y="106" width="376" height="411" key="FileChooserDialogImpl/72.27.1208.693@72.27.1208.693" timestamp="1595575031372" />
     <state x="581" y="146" width="424" height="496" key="FileChooserDialogImpl/72.27.1464.837@72.27.1464.837" timestamp="1592892591966" />
     <state width="1418" height="253" key="GridCell.Tab.0.bottom" timestamp="1593593313471">
       <screen x="72" y="27" width="1208" height="693" />
@@ -340,10 +341,10 @@
     </state>
     <state width="1418" height="253" key="GridCell.Tab.1.right/72.27.1208.693@72.27.1208.693" timestamp="1593593313472" />
     <state width="1418" height="253" key="GridCell.Tab.1.right/72.27.1464.837@72.27.1464.837" timestamp="1593417602485" />
-    <state x="99" y="22" width="1030" height="693" key="SettingsEditor" timestamp="1594687823714">
+    <state x="99" y="22" width="1030" height="693" key="SettingsEditor" timestamp="1595920455741">
       <screen x="72" y="27" width="1208" height="693" />
     </state>
-    <state x="99" y="22" width="1030" height="693" key="SettingsEditor/72.27.1208.693@72.27.1208.693" timestamp="1594687823714" />
+    <state x="99" y="22" width="1030" height="693" key="SettingsEditor/72.27.1208.693@72.27.1208.693" timestamp="1595920455741" />
     <state x="105" y="22" width="1248" height="742" key="SettingsEditor/72.27.1464.837@72.27.1464.837" timestamp="1592892602488" />
     <state x="578" y="361" width="448" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592569724405">
       <screen x="72" y="27" width="1464" height="837" />

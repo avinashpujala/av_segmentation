@@ -38,9 +38,4 @@ conda activate av_segmentation
 NB: When installing ```librosa >=0.5.1``` make sure that ```numba``` version is compatible.
 ```pip install numba==0.48```
 
-For training the model specifically on human speech, which involves face detection in the pipeline, install CMake and follow that with
-```python -m pip install face-recognition```
-
-For training the model specifically on human speech, which involves face detection in the pipeline, install CMake and follow that with
-```python -m pip install face-recognition```
 
