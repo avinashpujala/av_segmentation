@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4946cd1-24d0-4c91-b497-0aeb52a6db10" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_data_for_training.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +242,7 @@
       <workItem from="1595574267962" duration="14000" />
       <workItem from="1595574301033" duration="679000" />
       <workItem from="1595575004879" duration="627000" />
-      <workItem from="1595829424993" duration="2771000" />
+      <workItem from="1595829424993" duration="8253000" />
     </task>
     <servers />
   </component>
@@ -275,10 +274,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="232" y="31" width="899" height="689" key="#Deployment" timestamp="1595920920757">
+    <state x="232" y="26" width="899" height="689" key="#Deployment" timestamp="1596009351099">
       <screen x="72" y="27" width="1208" height="693" />
     </state>
-    <state x="232" y="31" width="899" height="689" key="#Deployment/72.27.1208.693@72.27.1208.693" timestamp="1595920920757" />
+    <state x="232" y="26" width="899" height="689" key="#Deployment/72.27.1208.693@72.27.1208.693" timestamp="1596009351099" />
     <state x="393" y="46" width="887" height="689" key="#Deployment/72.27.1464.837@72.27.1464.837" timestamp="1592891946208" />
     <state x="668" y="293" width="679" height="445" key="#Notifications" timestamp="1592460485120">
       <screen x="72" y="27" width="1464" height="837" />
@@ -292,9 +291,10 @@
       <screen x="72" y="27" width="1464" height="837" />
     </state>
     <state x="257" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1464.837@72.27.1464.837" timestamp="1592894583732" />
-    <state x="172" y="117" width="1264" height="642" key="DirDiffDialog" timestamp="1592570885934">
-      <screen x="72" y="27" width="1464" height="837" />
+    <state x="155" y="87" width="1043" height="532" key="DirDiffDialog" timestamp="1596010769689">
+      <screen x="72" y="27" width="1208" height="693" />
     </state>
+    <state x="155" y="87" width="1043" height="532" key="DirDiffDialog/72.27.1208.693@72.27.1208.693" timestamp="1596010769689" />
     <state x="172" y="117" width="1264" height="642" key="DirDiffDialog/72.27.1464.837@72.27.1464.837" timestamp="1592570885934" />
     <state x="492" y="106" width="376" height="411" key="FileChooserDialogImpl" timestamp="1595575031372">
       <screen x="72" y="27" width="1208" height="693" />
